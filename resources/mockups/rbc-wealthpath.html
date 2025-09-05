@@ -983,6 +983,423 @@
             background: rgb(0, 85, 156);
         }
         
+        /* Professional Header Styles */
+        .professional-header {
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
+            border-radius: 16px;
+            padding: 30px 35px;
+            margin-bottom: 30px;
+            color: white;
+            box-shadow: 0 8px 32px rgba(0, 106, 194, 0.15);
+        }
+        
+        .header-content-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        
+        .header-left {
+            flex: 1;
+        }
+        
+        .header-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0 0 8px 0;
+            color: white;
+        }
+        
+        .header-subtitle {
+            font-size: 16px;
+            margin: 0;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .header-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px 20px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 4px;
+            color: white;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .progress-section {
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .progress-label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            opacity: 0.9;
+        }
+        
+        .professional-progress-bar {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            height: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .professional-progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            height: 100%;
+            border-radius: 20px;
+            position: relative;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .progress-text {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 10px;
+            font-weight: bold;
+            color: rgb(0, 85, 156);
+        }
+        
+        /* Enhanced Dashboard Grid */
+        .enhanced-dashboard-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .main-content-area {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        
+        .sidebar-area {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .professional-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .form-input {
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: border-color 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: rgb(0, 106, 194);
+            box-shadow: 0 0 0 3px rgba(0, 106, 194, 0.1);
+        }
+        
+        .professional-btn {
+            background: linear-gradient(135deg, rgb(0, 106, 194), rgb(0, 85, 156));
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .professional-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 106, 194, 0.3);
+        }
+        
+        /* Integrated Chat Styles */
+        .integrated-chat-widget {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .widget-header {
+            background: linear-gradient(135deg, rgb(0, 106, 194), rgb(0, 85, 156));
+            color: white;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .widget-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .widget-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .widget-input-area {
+            padding: 16px 20px;
+            border-top: 1px solid #e9ecef;
+            background: white;
+        }
+        
+        .widget-input-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .widget-input {
+            flex: 1;
+            border: 2px solid #e9ecef;
+            border-radius: 20px;
+            padding: 10px 16px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        
+        .widget-input:focus {
+            border-color: rgb(0, 106, 194);
+        }
+        
+        .widget-send-btn {
+            background: rgb(0, 106, 194);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .widget-send-btn:hover {
+            background: rgb(0, 85, 156);
+        }
+        
+        /* Professional Goals Styles */
+        .goals-overview {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .goal-item-professional {
+            background: linear-gradient(135deg, #f8f9fa, #ffffff);
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .goal-item-professional:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            border-color: rgb(0, 106, 194);
+        }
+        
+        .goal-info {
+            margin-bottom: 15px;
+        }
+        
+        .goal-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: rgb(0, 106, 194);
+            margin: 0 0 4px 0;
+        }
+        
+        .goal-description {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .goal-progress {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .goal-amounts {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .current-amount {
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        .target-amount {
+            color: #666;
+        }
+        
+        .progress-percentage {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+        }
+        
+        /* Automated Savings Styles */
+        .automated-savings-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .savings-option {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .savings-option.active-option {
+            background: linear-gradient(135deg, #d1f2eb, #f8f9fa);
+            border-color: #28a745;
+        }
+        
+        .savings-option:hover {
+            border-color: rgb(0, 106, 194);
+            transform: translateY(-1px);
+        }
+        
+        .option-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .option-info strong {
+            font-size: 16px;
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
+        }
+        
+        .option-info p {
+            font-size: 14px;
+            color: #666;
+            margin: 0;
+        }
+        
+        .option-status {
+            background: rgba(40, 167, 69, 0.1);
+            color: #28a745;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .option-benefit {
+            background: rgba(255, 193, 7, 0.1);
+            color: #856404;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+        }
+        
+        .challenge-banner {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.1), rgba(32, 201, 151, 0.1));
+            color: #28a745;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+        
+        .amount-input {
+            width: 80px;
+            padding: 8px 12px;
+            border: 2px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            transition: border-color 0.3s ease;
+        }
+        
+        .amount-input:focus {
+            outline: none;
+            border-color: rgb(0, 106, 194);
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .main-content {
@@ -1409,206 +1826,221 @@
 
                 <!-- Goals & Savings Tab -->
                 <div id="goals-tab" class="tab-content">
-                    <!-- Gamification Header -->
-                    <div class="gamification-header" style="background: linear-gradient(135deg, #28a745, #20c997); border-radius: 12px; padding: 20px; margin-bottom: 30px; color: white; position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: -50px; right: -50px; font-size: 120px; opacity: 0.1;">🎯</div>
-                        <div style="display: flex; justify-content: space-between; align-items: center;">
-                            <div>
-                                <h2 style="margin: 0 0 10px 0;">Savings Level: Super Saver 🌟</h2>
-                                <p style="margin: 0; opacity: 0.9;">You're crushing your savings goals! Keep it up!</p>
+                    <!-- Professional Header -->
+                    <div class="professional-header">
+                        <div class="header-content-flex">
+                            <div class="header-left">
+                                <h2 class="header-title">Goals & Savings Management</h2>
+                                <p class="header-subtitle">Track your progress and automate your savings</p>
                             </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 36px; font-weight: bold;">2,850</div>
-                                <div style="font-size: 14px; opacity: 0.9;">WealthPoints</div>
-                            </div>
-                        </div>
-                        <div style="background: rgba(255, 255, 255, 0.2); border-radius: 10px; height: 8px; margin-top: 15px;">
-                            <div style="background: #ffd700; border-radius: 10px; height: 100%; width: 75%; position: relative;">
-                                <div style="position: absolute; right: -10px; top: -15px; background: #ffd700; color: #1c5aa0; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: bold;">75% to Elite</div>
+                            <div class="header-right">
+                                <div class="stats-grid">
+                                    <div class="stat-item">
+                                        <div class="stat-value">2,850</div>
+                                        <div class="stat-label">WealthPoints</div>
+                                    </div>
+                                    <div class="stat-item">
+                                        <div class="stat-value">Super Saver</div>
+                                        <div class="stat-label">Current Level</div>
+                                    </div>
+                                </div>
+                                <div class="progress-section">
+                                    <div class="progress-label">Progress to Elite Level</div>
+                                    <div class="professional-progress-bar">
+                                        <div class="professional-progress-fill" style="width: 75%;">
+                                            <span class="progress-text">75%</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="dashboard-grid">
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon goals-icon">
-                                    <i class="fas fa-bullseye"></i>
-                                </div>
-                                <h3 class="card-title">Create New Goal</h3>
-                            </div>
-                            <form class="goal-form">
-                                <input type="text" placeholder="Goal Name (e.g., Europe Trip 2025)" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
-                                <input type="number" placeholder="Target Amount" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
-                                <input type="date" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
-                                <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                                        <i class="fas fa-trophy" style="color: #ffd700; margin-right: 10px;"></i>
-                                        <strong>Goal Rewards:</strong>
+                    <div class="enhanced-dashboard-grid">
+                        <div class="main-content-area">
+                            <!-- Goal Creation Card -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <div class="card-icon goals-icon">
+                                        <i class="fas fa-bullseye"></i>
                                     </div>
-                                    <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #666;">
-                                        <li>+500 WealthPoints on completion</li>
-                                        <li>Achievement badge unlock</li>
-                                        <li>Personalized celebration animation</li>
-                                    </ul>
+                                    <h3 class="card-title">Create New Savings Goal</h3>
                                 </div>
-                                <button type="submit" style="width: 100%; padding: 12px; background: linear-gradient(135deg, #28a745, #20c997); color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">🎯 Create Goal & Earn Points</button>
-                            </form>
+                                <form class="professional-form" id="goalCreationForm">
+                                    <div class="form-group">
+                                        <label class="form-label">Goal Name</label>
+                                        <input type="text" class="form-input" placeholder="e.g., European Vacation 2025" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Target Amount (CAD)</label>
+                                        <input type="number" class="form-input" placeholder="8,000" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Target Date</label>
+                                        <input type="date" class="form-input" required>
+                                    </div>
+                                    <div style="background: linear-gradient(135deg, #f8f9fa, #e9ecef); padding: 20px; border-radius: 12px; border: 1px solid #e9ecef;">
+                                        <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                                            <i class="fas fa-trophy" style="color: #ffd700; margin-right: 10px; font-size: 18px;"></i>
+                                            <strong style="color: #333;">Goal Benefits</strong>
+                                        </div>
+                                        <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #666; line-height: 1.6;">
+                                            <li>Automatic progress tracking</li>
+                                            <li>Smart saving recommendations</li>
+                                            <li>Milestone celebrations & rewards</li>
+                                            <li>Achievement badges & WealthPoints</li>
+                                        </ul>
+                                    </div>
+                                    <button type="submit" class="professional-btn">
+                                        <i class="fas fa-plus"></i>
+                                        Create Savings Goal
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Current Goals Overview -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h3 class="card-title">Your Active Goals</h3>
+                                </div>
+                                <div class="goals-overview">
+                                    <div class="goal-item-professional">
+                                        <div class="goal-info">
+                                            <h4 class="goal-name">Emergency Fund</h4>
+                                            <p class="goal-description">Build financial security</p>
+                                        </div>
+                                        <div class="goal-progress">
+                                            <div class="goal-amounts">
+                                                <span class="current-amount">$18,000</span> / <span class="target-amount">$20,000</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 90%;"></div>
+                                            </div>
+                                            <div class="progress-percentage">90% Complete</div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="goal-item-professional">
+                                        <div class="goal-info">
+                                            <h4 class="goal-name">Vacation Fund</h4>
+                                            <p class="goal-description">European adventure 2025</p>
+                                        </div>
+                                        <div class="goal-progress">
+                                            <div class="goal-amounts">
+                                                <span class="current-amount">$4,200</span> / <span class="target-amount">$8,000</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 52.5%;"></div>
+                                            </div>
+                                            <div class="progress-percentage">53% Complete</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="goal-item-professional">
+                                        <div class="goal-info">
+                                            <h4 class="goal-name">Down Payment</h4>
+                                            <p class="goal-description">Home ownership fund</p>
+                                        </div>
+                                        <div class="goal-progress">
+                                            <div class="goal-amounts">
+                                                <span class="current-amount">$12,500</span> / <span class="target-amount">$50,000</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress-fill" style="width: 25%;"></div>
+                                            </div>
+                                            <div class="progress-percentage">25% Complete</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon savings-icon">
+                        <div class="sidebar-area">
+                            <!-- Integrated Chatbox Widget -->
+                            <div class="integrated-chat-widget">
+                                <div class="widget-header">
+                                    <i class="fas fa-robot"></i>
+                                    <h3 class="widget-title">Financial Assistant</h3>
+                                </div>
+                                <div class="widget-messages" id="widgetMessages">
+                                    <div class="chat-message bot-message">
+                                        <div class="message-avatar bot-avatar">RB</div>
+                                        <div class="message-bubble">
+                                            Hi! I'm here to help with your savings goals. Ask me about budgeting, goal strategies, or automated savings!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-input-area">
+                                    <div class="widget-input-container">
+                                        <input type="text" class="widget-input" placeholder="Ask about savings goals..." id="widgetInput" onkeypress="handleWidgetKeyPress(event)">
+                                        <button class="widget-send-btn" onclick="sendWidgetMessage()">
+                                            <i class="fas fa-paper-plane"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Smart Savings Settings -->
+                            <div class="dashboard-card">
+                                <div class="card-header">
+                                    <div class="card-icon savings-icon">
                                     <i class="fas fa-piggy-bank"></i>
                                 </div>
                                 <h3 class="card-title">Smart Savings Automation</h3>
                             </div>
-                            <div class="savings-settings">
-                                <div class="metric-row" style="background: #d1f2eb; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong>Weekly Auto-Save</strong>
-                                            <div style="font-size: 12px; color: #666;">+50 points weekly when active</div>
+                                <div class="automated-savings-options">
+                                    <div class="savings-option active-option">
+                                        <div class="option-header">
+                                            <div class="option-info">
+                                                <strong>Weekly Auto-Save</strong>
+                                                <p>Automatically save $50 every week</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider"></span>
+                                            </label>
                                         </div>
-                                        <label class="switch">
-                                            <input type="checkbox" checked>
-                                            <span class="slider"></span>
-                                        </label>
-                                    </div>
-                                    <div style="margin-top: 10px; font-size: 14px; color: #28a745;">
-                                        🔥 7-week streak! Next milestone: 10 weeks (+200 bonus points)
-                                    </div>
-                                </div>
-                                
-                                <div class="metric-row" style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong>Round-up Purchases</strong>
-                                            <div style="font-size: 12px; color: #666;">Avg. +$47/month automatically</div>
+                                        <div class="option-status">
+                                            <i class="fas fa-fire"></i> 7-week streak! Next milestone: 10 weeks
                                         </div>
-                                        <label class="switch">
-                                            <input type="checkbox">
-                                            <span class="slider"></span>
-                                        </label>
                                     </div>
-                                    <div style="margin-top: 10px; font-size: 14px; color: #856404;">
-                                        💡 Enable for +25 points per $10 rounded up!
-                                    </div>
-                                </div>
-                                
-                                <div class="metric-row" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                        <strong>Monthly Auto-Transfer</strong>
-                                        <input type="number" value="500" style="width: 80px; padding: 5px; border: 1px solid #ddd; border-radius: 4px;">
-                                    </div>
-                                    <div style="background: white; padding: 10px; border-radius: 4px; border-left: 4px solid #28a745;">
-                                        <div style="font-size: 14px; color: #28a745; margin-bottom: 5px;">📈 Challenge Mode Active</div>
-                                        <div style="font-size: 12px; color: #666;">Increase to $600 for double points this month!</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <h3 class="card-title">Savings Performance</h3>
-                            </div>
-                            <canvas id="savingsChart" style="max-height: 200px;"></canvas>
-                        </div>
-
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon" style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1c5aa0;">
-                                    <i class="fas fa-trophy"></i>
-                                </div>
-                                <h3 class="card-title">Achievement Gallery</h3>
-                            </div>
-                            <div class="achievement-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 15px 0;">
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #d1f2eb; border-radius: 8px; cursor: pointer;" onclick="showAchievement('first-goal')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">🎯</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #28a745;">UNLOCKED</div>
-                                    <div style="font-size: 11px; color: #666;">First Goal</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #d1f2eb; border-radius: 8px; cursor: pointer;" onclick="showAchievement('streak-master')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">🔥</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #28a745;">UNLOCKED</div>
-                                    <div style="font-size: 11px; color: #666;">Streak Master</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #fff3cd; border-radius: 8px; cursor: pointer;" onclick="showAchievement('big-saver')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">💰</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #856404;">50% COMPLETE</div>
-                                    <div style="font-size: 11px; color: #666;">Big Saver</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('automation-king')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🤖</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Automation King</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('goal-crusher')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🏆</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Goal Crusher</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('wealth-builder')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🏰</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Wealth Builder</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white;">
-                                    <i class="fas fa-calendar-check"></i>
-                                </div>
-                                <h3 class="card-title">Daily Challenges</h3>
-                            </div>
-                            <div class="challenge-list">
-                                <div class="challenge-item" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #28a745;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">☕ Skip One Coffee Purchase</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Save ~$5 today and earn bonus points</div>
+                                    <div class="savings-option">
+                                        <div class="option-header">
+                                            <div class="option-info">
+                                                <strong>Round-up Purchases</strong>
+                                                <p>Round up purchases to nearest dollar</p>
+                                            </div>
+                                            <label class="switch">
+                                                <input type="checkbox">
+                                                <span class="slider"></span>
+                                            </label>
                                         </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #28a745; font-weight: bold;">+100 pts</div>
-                                            <button style="background: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer;" onclick="completeChallenge('coffee')">Complete</button>
+                                        <div class="option-benefit">
+                                            💡 Avg. +$47/month automatically saved
                                         </div>
                                     </div>
-                                </div>
-                                
-                                <div class="challenge-item" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #ffc107;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">💡 Review Monthly Spending</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Check your spending insights for 2 minutes</div>
-                                        </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #ffc107; font-weight: bold;">+75 pts</div>
-                                            <button style="background: #ffc107; color: #1c5aa0; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer;" onclick="completeChallenge('review')">Start</button>
-                                        </div>
-                                    </div>
-                                </div>
 
-                                <div class="challenge-item" style="background: #d1ecf1; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #17a2b8; opacity: 0.7;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">✅ Enable Round-up Savings</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Turn on automatic round-ups</div>
+                                    <div class="savings-option">
+                                        <div class="option-header">
+                                            <div class="option-info">
+                                                <strong>Monthly Auto-Transfer</strong>
+                                                <p>Set amount transferred monthly</p>
+                                            </div>
+                                            <input type="number" value="500" class="amount-input">
                                         </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #28a745; font-weight: bold;">COMPLETED</div>
-                                            <div style="font-size: 12px; color: #666;">+150 pts earned</div>
+                                        <div class="challenge-banner">
+                                            📈 Challenge: Increase to $600 for bonus rewards!
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
                 </div>
 
                 <!-- Spending Insights Tab -->
@@ -2340,6 +2772,68 @@
         
         function downloadReport() {
             alert('📊 Financial Report Download\n\nIn a real implementation, this would generate and download your personalized financial report including:\n\n• Account summaries\n• Spending analysis\n• Goal progress\n• Investment performance\n• Recommendations');
+        }
+
+        // Widget Chat functionality
+        function sendWidgetMessage() {
+            const input = document.getElementById('widgetInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                addWidgetMessage(message, 'user');
+                input.value = '';
+                
+                setTimeout(() => {
+                    respondToWidgetUser(message);
+                }, 800);
+            }
+        }
+        
+        function handleWidgetKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendWidgetMessage();
+            }
+        }
+        
+        function addWidgetMessage(text, sender) {
+            const messagesContainer = document.getElementById('widgetMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}-message`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `message-avatar ${sender}-avatar`;
+            avatar.textContent = sender === 'user' ? 'YOU' : 'RB';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.innerHTML = text;
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(bubble);
+            messagesContainer.appendChild(messageDiv);
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function respondToWidgetUser(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+            let response = '';
+            
+            if (lowerMessage.includes('goal') || lowerMessage.includes('save')) {
+                response = "Great question about savings goals! I see you're 90% complete on your Emergency Fund and 53% on your Vacation Fund. Would you like tips on reaching your targets faster?";
+            } else if (lowerMessage.includes('budget') || lowerMessage.includes('automat')) {
+                response = "For automated savings, I recommend: 1) Enable round-up purchases for effortless saving, 2) Set up weekly auto-transfers, 3) Use the challenge mode to boost your monthly transfers. Which interests you most?";
+            } else if (lowerMessage.includes('help') || lowerMessage.includes('tip')) {
+                response = "I can help with: Setting up new savings goals, optimizing your automated savings, tracking goal progress, and providing personalized saving strategies. What would you like to focus on?";
+            } else if (lowerMessage.includes('emergency')) {
+                response = "Your Emergency Fund is at $18,000 of $20,000 (90% complete)! You're almost there. Consider increasing your weekly auto-save by $10 to reach this goal 4 weeks sooner.";
+            } else if (lowerMessage.includes('vacation')) {
+                response = "Your Vacation Fund needs $3,800 more to reach $8,000. Enable round-up purchases (+$47/month) and increase auto-transfer to $550/month to reach your goal 6 months earlier!";
+            } else {
+                response = "I understand you're asking about: \"" + userMessage + "\". As your financial assistant, I can help with goal setting, automated savings, budget optimization, and progress tracking. What specific area interests you?";
+            }
+            
+            addWidgetMessage(response, 'bot');
         }
     </script>
 </body>
