@@ -736,6 +736,253 @@
             transform: translateX(26px);
         }
         
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 106, 194, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 106, 194, 0.4);
+        }
+        
+        .chat-btn {
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+        
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-btn .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+        }
+        
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Chat Modal */
+        .chat-modal {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: slideInUp 0.3s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .chat-header h3 {
+            margin: 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .chat-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chat-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .chat-body {
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        
+        .chat-message {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .bot-message {
+            flex-direction: row;
+        }
+        
+        .user-message {
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .bot-avatar {
+            background: rgb(0, 106, 194);
+            color: white;
+        }
+        
+        .user-avatar {
+            background: #28a745;
+            color: white;
+        }
+        
+        .message-bubble {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .bot-message .message-bubble {
+            background: white;
+            border: 1px solid #e9ecef;
+            color: #333;
+        }
+        
+        .user-message .message-bubble {
+            background: rgb(0, 106, 194);
+            color: white;
+        }
+        
+        .chat-input-area {
+            padding: 16px 20px;
+            border-top: 1px solid #e9ecef;
+            background: white;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .chat-input {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .chat-input:focus {
+            border-color: rgb(0, 106, 194);
+        }
+        
+        .chat-send {
+            background: rgb(0, 106, 194);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .chat-send:hover {
+            background: rgb(0, 85, 156);
+        }
+        
         /* Responsive */
         @media (max-width: 768px) {
             .main-content {
@@ -746,6 +993,18 @@
             
             .dashboard-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .floating-actions {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .chat-modal {
+                bottom: 80px;
+                right: 20px;
+                left: 20px;
+                width: auto;
             }
         }
     </style>
@@ -1663,6 +1922,57 @@
         </div>
     </div>
 
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <button class="floating-btn chat-btn" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>
+            <div class="tooltip">Financial Assistant</div>
+        </button>
+        <button class="floating-btn download-btn" onclick="downloadReport()">
+            <i class="fas fa-download"></i>
+            <div class="tooltip">Download Report</div>
+        </button>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-header">
+            <h3>
+                <i class="fas fa-robot"></i>
+                RBC Financial Assistant
+            </h3>
+            <button class="chat-close" onclick="closeChat()">×</button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar bot-avatar">RB</div>
+                    <div class="message-bubble">
+                        Hi there! I'm your RBC Financial Assistant. How can I help you with your financial goals today?
+                    </div>
+                </div>
+                <div class="chat-message bot-message">
+                    <div class="message-avatar bot-avatar">RB</div>
+                    <div class="message-bubble">
+                        I can help you with:
+                        <br>• Account balances and transactions
+                        <br>• Budget planning and savings tips
+                        <br>• Investment guidance
+                        <br>• Financial goal tracking
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" placeholder="Type your message..." id="chatInput" onkeypress="handleChatKeyPress(event)">
+                    <button class="chat-send" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function openWellnessApp() {
             const modal = document.getElementById('wellnessModal');
@@ -1937,6 +2247,100 @@
                 });
             }, 1000);
         });
+
+        // Chat functionality
+        function toggleChat() {
+            const chatModal = document.getElementById('chatModal');
+            const isVisible = chatModal.style.display === 'block';
+            
+            if (isVisible) {
+                closeChat();
+            } else {
+                openChat();
+            }
+        }
+        
+        function openChat() {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.display = 'block';
+            
+            // Focus on input after a brief delay for animation
+            setTimeout(() => {
+                document.getElementById('chatInput').focus();
+            }, 300);
+        }
+        
+        function closeChat() {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.display = 'none';
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                addMessage(message, 'user');
+                input.value = '';
+                
+                // Simulate bot response after a delay
+                setTimeout(() => {
+                    respondToUser(message);
+                }, 800);
+            }
+        }
+        
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}-message`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `message-avatar ${sender}-avatar`;
+            avatar.textContent = sender === 'user' ? 'YOU' : 'RB';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.innerHTML = text;
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(bubble);
+            messagesContainer.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function respondToUser(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+            let response = '';
+            
+            if (lowerMessage.includes('balance') || lowerMessage.includes('account')) {
+                response = "Your current account balance is $••,•••.•• CAD in your RBC Advantage Banking account. Would you like me to show you recent transactions?";
+            } else if (lowerMessage.includes('budget') || lowerMessage.includes('spending')) {
+                response = "Based on your WealthPath analysis, you're spending $5,240 this month with a 38% savings rate. Your top spending category is Housing & Utilities at $2,100. Need help optimizing your budget?";
+            } else if (lowerMessage.includes('goal') || lowerMessage.includes('saving')) {
+                response = "Great question about savings goals! You're 90% complete on your Emergency Fund ($18,000/$20,000) and 52% on your Vacation Fund ($4,200/$8,000). Which goal would you like to focus on?";
+            } else if (lowerMessage.includes('investment') || lowerMessage.includes('invest')) {
+                response = "I see you have an RBC Direct Investing Practice Account. Based on your financial health score of 8.2, you might consider diversifying with a balanced growth portfolio. Would you like me to schedule a consultation?";
+            } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                response = "Hello! I'm here to help with your RBC banking and financial planning needs. What can I assist you with today?";
+            } else {
+                response = "I understand you're asking about: \"" + userMessage + "\". Let me connect you with the right information or specialist. In the meantime, you can explore your WealthPath dashboard for detailed insights about your finances.";
+            }
+            
+            addMessage(response, 'bot');
+        }
+        
+        function downloadReport() {
+            alert('📊 Financial Report Download\n\nIn a real implementation, this would generate and download your personalized financial report including:\n\n• Account summaries\n• Spending analysis\n• Goal progress\n• Investment performance\n• Recommendations');
+        }
     </script>
 </body>
 </html>
