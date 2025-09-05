@@ -1723,195 +1723,214 @@
                         </div>
                     </div>
 
-                    <div class="dashboard-grid">
-                        <div class="dashboard-card">
-                            <div class="card-header">
-                                <div class="card-icon goals-icon">
+                    <div class="dashboard-grid" style="grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 24px;">
+                        <div class="dashboard-card" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 106, 194, 0.12);">
+                            <div class="card-header" style="padding: 24px 24px 16px 24px; border-bottom: 1px solid #e9ecef;">
+                                <div class="card-icon goals-icon" style="margin-right: 16px;">
                                     <i class="fas fa-bullseye"></i>
                                 </div>
-                                <h3 class="card-title">Create New Goal</h3>
+                                <h3 class="card-title" style="font-size: 18px; margin: 0; color: #1c5aa0;">Create New Goal</h3>
                             </div>
-                            <form class="goal-form" style="padding: 20px;">
-                                <div class="refined-form-group">
-                                    <label class="refined-label">Goal Name</label>
-                                    <input type="text" placeholder="e.g., European Vacation 2025" class="refined-input">
+                            <form class="goal-form" style="padding: 24px;">
+                                <div class="refined-form-group" style="margin-bottom: 20px;">
+                                    <label class="refined-label" style="display: block; margin-bottom: 8px; font-weight: 600; color: #495057;">Goal Name</label>
+                                    <input type="text" placeholder="e.g., European Vacation 2025" class="refined-input" style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 14px; transition: border-color 0.2s;">
                                 </div>
-                                <div class="refined-form-group">
-                                    <label class="refined-label">Target Amount (CAD)</label>
-                                    <input type="number" placeholder="8,000" class="refined-input">
+                                <div class="refined-form-group" style="margin-bottom: 20px;">
+                                    <label class="refined-label" style="display: block; margin-bottom: 8px; font-weight: 600; color: #495057;">Target Amount (CAD)</label>
+                                    <input type="number" placeholder="8,000" class="refined-input" style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 14px; transition: border-color 0.2s;">
                                 </div>
-                                <div class="refined-form-group">
-                                    <label class="refined-label">Target Date</label>
-                                    <input type="date" class="refined-input">
+                                <div class="refined-form-group" style="margin-bottom: 24px;">
+                                    <label class="refined-label" style="display: block; margin-bottom: 8px; font-weight: 600; color: #495057;">Target Date</label>
+                                    <input type="date" class="refined-input" style="width: 100%; padding: 12px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 14px; transition: border-color 0.2s;">
                                 </div>
-                                <div class="refined-rewards-box">
-                                    <div class="rewards-header">
-                                        <i class="fas fa-trophy" style="color: #ffd700; margin-right: 10px; font-size: 18px;"></i>
-                                        <strong>Goal Rewards</strong>
+                                <div class="refined-rewards-box" style="background: linear-gradient(135deg, #fff8e1, #ffecb3); border: 1px solid #ffd54f; border-radius: 10px; padding: 20px; margin-bottom: 24px;">
+                                    <div class="rewards-header" style="display: flex; align-items: center; margin-bottom: 16px;">
+                                        <i class="fas fa-trophy" style="color: #f57c00; margin-right: 12px; font-size: 20px;"></i>
+                                        <strong style="color: #ef6c00; font-size: 16px;">Goal Rewards</strong>
                                     </div>
-                                    <ul class="rewards-list">
-                                        <li>+500 WealthPoints on completion</li>
-                                        <li>Achievement badge unlock</li>
-                                        <li>Personalized celebration animation</li>
-                                        <li>Progress tracking & insights</li>
+                                    <ul class="rewards-list" style="list-style: none; padding: 0; margin: 0;">
+                                        <li style="padding: 6px 0; color: #5d4037; display: flex; align-items: center;"><i class="fas fa-star" style="color: #ff9800; margin-right: 8px; font-size: 12px;"></i>+500 WealthPoints on completion</li>
+                                        <li style="padding: 6px 0; color: #5d4037; display: flex; align-items: center;"><i class="fas fa-star" style="color: #ff9800; margin-right: 8px; font-size: 12px;"></i>Achievement badge unlock</li>
+                                        <li style="padding: 6px 0; color: #5d4037; display: flex; align-items: center;"><i class="fas fa-star" style="color: #ff9800; margin-right: 8px; font-size: 12px;"></i>Personalized celebration animation</li>
+                                        <li style="padding: 6px 0; color: #5d4037; display: flex; align-items: center;"><i class="fas fa-star" style="color: #ff9800; margin-right: 8px; font-size: 12px;"></i>Progress tracking & insights</li>
                                     </ul>
                                 </div>
-                                <button type="submit" class="refined-create-btn">
-                                    <i class="fas fa-plus"></i>
+                                <button type="submit" class="refined-create-btn" style="width: 100%; padding: 14px; background: linear-gradient(135deg, #1c5aa0, #0066cc); color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 16px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;">
+                                    <i class="fas fa-plus" style="margin-right: 8px;"></i>
                                     Create Goal & Earn Points
                                 </button>
                             </form>
                         </div>
 
-                        <div class="dashboard-card refined-card">
-                            <div class="card-header refined-card-header">
-                                <div class="card-icon savings-icon refined-icon">
+                        <div class="dashboard-card" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 106, 194, 0.12);">
+                            <div class="card-header" style="padding: 24px 24px 16px 24px; border-bottom: 1px solid #e9ecef;">
+                                <div class="card-icon savings-icon" style="margin-right: 16px;">
                                     <i class="fas fa-piggy-bank"></i>
                                 </div>
-                                <h3 class="card-title refined-card-title">Smart Savings Automation</h3>
+                                <h3 class="card-title" style="font-size: 18px; margin: 0; color: #1c5aa0;">Smart Savings Automation</h3>
                             </div>
-                            <div class="savings-settings refined-savings-settings">
-                                <div class="metric-row refined-metric-row">
-                                    <div class="refined-metric-content">
-                                        <div class="refined-metric-info">
-                                            <strong class="refined-metric-title">Weekly Auto-Save</strong>
-                                            <div class="refined-metric-subtitle">+50 points weekly when active</div>
+                            <div class="savings-settings" style="padding: 24px;">
+                                <div class="metric-row" style="background: #f8fffe; border: 1px solid #b8f5d0; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                        <div style="flex: 1;">
+                                            <strong style="color: #1c5aa0; font-size: 16px;">Weekly Auto-Save</strong>
+                                            <div style="color: #28a745; font-size: 13px; margin-top: 4px;">+50 points weekly when active</div>
                                         </div>
-                                        <label class="switch refined-switch">
+                                        <label class="switch" style="margin-left: 16px;">
                                             <input type="checkbox" checked>
                                             <span class="slider"></span>
                                         </label>
                                     </div>
-                                    <div style="margin-top: 10px; font-size: 14px; color: #28a745;">
-                                        🔥 7-week streak! Next milestone: 10 weeks (+200 bonus points)
+                                    <div style="margin-top: 16px; padding: 12px; background: #d4edda; border-radius: 8px; display: flex; align-items: center;">
+                                        <i class="fas fa-fire" style="color: #ff6b35; margin-right: 8px;"></i>
+                                        <span style="font-size: 14px; color: #155724; font-weight: 500;">7-week streak! Next milestone: 10 weeks (+200 bonus points)</span>
                                     </div>
                                 </div>
                                 
-                                <div class="metric-row" style="background: #fff3cd; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong>Round-up Purchases</strong>
-                                            <div style="font-size: 12px; color: #666;">Avg. +$47/month automatically</div>
+                                <div class="metric-row" style="background: #fff8e1; border: 1px solid #ffe0b3; border-radius: 10px; padding: 20px; margin-bottom: 20px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                        <div style="flex: 1;">
+                                            <strong style="color: #1c5aa0; font-size: 16px;">Round-up Purchases</strong>
+                                            <div style="color: #8a6d3b; font-size: 13px; margin-top: 4px;">Avg. +$47/month automatically</div>
                                         </div>
-                                        <label class="switch">
+                                        <label class="switch" style="margin-left: 16px;">
                                             <input type="checkbox">
                                             <span class="slider"></span>
                                         </label>
                                     </div>
-                                    <div style="margin-top: 10px; font-size: 14px; color: #856404;">
-                                        💡 Enable for +25 points per $10 rounded up!
+                                    <div style="margin-top: 16px; padding: 12px; background: #fdf2e9; border-radius: 8px; display: flex; align-items: center;">
+                                        <i class="fas fa-lightbulb" style="color: #f57c00; margin-right: 8px;"></i>
+                                        <span style="font-size: 14px; color: #8a6d3b; font-weight: 500;">Enable for +25 points per $10 rounded up!</span>
                                     </div>
                                 </div>
                                 
-                                <div class="metric-row" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                                        <strong>Monthly Auto-Transfer</strong>
-                                        <input type="number" value="500" style="width: 80px; padding: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                                <div class="metric-row" style="background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 10px; padding: 20px;">
+                                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                                        <strong style="color: #1c5aa0; font-size: 16px;">Monthly Auto-Transfer</strong>
+                                        <div style="display: flex; align-items: center;">
+                                            <span style="margin-right: 8px; color: #666; font-size: 14px;">$</span>
+                                            <input type="number" value="500" style="width: 80px; padding: 8px 12px; border: 2px solid #dee2e6; border-radius: 6px; font-size: 14px; text-align: center; font-weight: 600;">
+                                        </div>
                                     </div>
-                                    <div style="background: white; padding: 10px; border-radius: 4px; border-left: 4px solid #28a745;">
-                                        <div style="font-size: 14px; color: #28a745; margin-bottom: 5px;">📈 Challenge Mode Active</div>
-                                        <div style="font-size: 12px; color: #666;">Increase to $600 for double points this month!</div>
+                                    <div style="background: white; padding: 16px; border-radius: 8px; border-left: 4px solid #28a745;">
+                                        <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                            <i class="fas fa-chart-line" style="color: #28a745; margin-right: 8px;"></i>
+                                            <span style="font-size: 15px; color: #28a745; font-weight: 600;">Challenge Mode Active</span>
+                                        </div>
+                                        <div style="font-size: 14px; color: #666;">Increase to $600 for double points this month!</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="dashboard-card refined-card">
-                            <div class="card-header refined-card-header">
-                                <div class="card-icon refined-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                        <div class="dashboard-card" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 106, 194, 0.12);">
+                            <div class="card-header" style="padding: 24px 24px 16px 24px; border-bottom: 1px solid #e9ecef;">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white; margin-right: 16px;">
                                     <i class="fas fa-chart-line"></i>
                                 </div>
-                                <h3 class="card-title refined-card-title">Savings Performance</h3>
+                                <h3 class="card-title" style="font-size: 18px; margin: 0; color: #1c5aa0;">Savings Performance</h3>
                             </div>
-                            <div class="refined-chart-container">
-                                <canvas id="savingsChart" style="max-height: 200px;"></canvas>
+                            <div style="padding: 24px;">
+                                <canvas id="savingsChart" style="max-height: 240px; width: 100%;"></canvas>
                             </div>
                         </div>
 
-                        <div class="dashboard-card refined-card">
-                            <div class="card-header refined-card-header">
-                                <div class="card-icon refined-icon" style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1c5aa0;">
+                        <div class="dashboard-card" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 106, 194, 0.12);">
+                            <div class="card-header" style="padding: 24px 24px 16px 24px; border-bottom: 1px solid #e9ecef;">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #ffd700, #ffed4e); color: #1c5aa0; margin-right: 16px;">
                                     <i class="fas fa-trophy"></i>
                                 </div>
-                                <h3 class="card-title refined-card-title">Achievement Gallery</h3>
+                                <h3 class="card-title" style="font-size: 18px; margin: 0; color: #1c5aa0;">Achievement Gallery</h3>
                             </div>
-                            <div class="achievement-grid refined-achievement-grid">
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #d1f2eb; border-radius: 8px; cursor: pointer;" onclick="showAchievement('first-goal')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">🎯</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #28a745;">UNLOCKED</div>
-                                    <div style="font-size: 11px; color: #666;">First Goal</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #d1f2eb; border-radius: 8px; cursor: pointer;" onclick="showAchievement('streak-master')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">🔥</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #28a745;">UNLOCKED</div>
-                                    <div style="font-size: 11px; color: #666;">Streak Master</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #fff3cd; border-radius: 8px; cursor: pointer;" onclick="showAchievement('big-saver')">
-                                    <div style="font-size: 32px; margin-bottom: 8px;">💰</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #856404;">50% COMPLETE</div>
-                                    <div style="font-size: 11px; color: #666;">Big Saver</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('automation-king')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🤖</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Automation King</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('goal-crusher')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🏆</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Goal Crusher</div>
-                                </div>
-                                <div class="achievement-item" style="text-align: center; padding: 15px; background: #f8f9fa; border-radius: 8px; cursor: pointer;" onclick="showAchievement('wealth-builder')">
-                                    <div style="font-size: 32px; margin-bottom: 8px; opacity: 0.5;">🏰</div>
-                                    <div style="font-size: 12px; font-weight: bold; color: #666;">LOCKED</div>
-                                    <div style="font-size: 11px; color: #999;">Wealth Builder</div>
+                            <div style="padding: 24px;">
+                                <div class="achievement-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: linear-gradient(135deg, #d4edda, #c3e6cb); border: 1px solid #b8dacc; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('first-goal')">
+                                        <div style="font-size: 36px; margin-bottom: 12px;">🎯</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #155724; margin-bottom: 4px;">UNLOCKED</div>
+                                        <div style="font-size: 12px; color: #495057; font-weight: 500;">First Goal</div>
+                                    </div>
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: linear-gradient(135deg, #d4edda, #c3e6cb); border: 1px solid #b8dacc; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('streak-master')">
+                                        <div style="font-size: 36px; margin-bottom: 12px;">🔥</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #155724; margin-bottom: 4px;">UNLOCKED</div>
+                                        <div style="font-size: 12px; color: #495057; font-weight: 500;">Streak Master</div>
+                                    </div>
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: linear-gradient(135deg, #fff3cd, #ffeaa7); border: 1px solid #f1c40f; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('big-saver')">
+                                        <div style="font-size: 36px; margin-bottom: 12px;">💰</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #856404; margin-bottom: 4px;">50% COMPLETE</div>
+                                        <div style="font-size: 12px; color: #495057; font-weight: 500;">Big Saver</div>
+                                    </div>
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('automation-king')">
+                                        <div style="font-size: 36px; margin-bottom: 12px; opacity: 0.4;">🤖</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #6c757d; margin-bottom: 4px;">LOCKED</div>
+                                        <div style="font-size: 12px; color: #adb5bd; font-weight: 500;">Automation King</div>
+                                    </div>
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('goal-crusher')">
+                                        <div style="font-size: 36px; margin-bottom: 12px; opacity: 0.4;">🏆</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #6c757d; margin-bottom: 4px;">LOCKED</div>
+                                        <div style="font-size: 12px; color: #adb5bd; font-weight: 500;">Goal Crusher</div>
+                                    </div>
+                                    <div class="achievement-item" style="text-align: center; padding: 20px; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 12px; cursor: pointer; transition: transform 0.2s;" onclick="showAchievement('wealth-builder')">
+                                        <div style="font-size: 36px; margin-bottom: 12px; opacity: 0.4;">🏰</div>
+                                        <div style="font-size: 13px; font-weight: bold; color: #6c757d; margin-bottom: 4px;">LOCKED</div>
+                                        <div style="font-size: 12px; color: #adb5bd; font-weight: 500;">Wealth Builder</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="dashboard-card refined-card">
-                            <div class="card-header refined-card-header">
-                                <div class="card-icon refined-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white;">
+                        <div class="dashboard-card" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 106, 194, 0.12);">
+                            <div class="card-header" style="padding: 24px 24px 16px 24px; border-bottom: 1px solid #e9ecef;">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white; margin-right: 16px;">
                                     <i class="fas fa-calendar-check"></i>
                                 </div>
-                                <h3 class="card-title refined-card-title">Daily Challenges</h3>
+                                <h3 class="card-title" style="font-size: 18px; margin: 0; color: #1c5aa0;">Daily Challenges</h3>
                             </div>
-                            <div class="challenge-list refined-challenge-list">
-                                <div class="challenge-item" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #28a745;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">☕ Skip One Coffee Purchase</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Save ~$5 today and earn bonus points</div>
+                            <div style="padding: 24px;">
+                                <div class="challenge-item" style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #e9ecef; border-left: 4px solid #28a745;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                        <div style="flex: 1;">
+                                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                <span style="font-size: 20px; margin-right: 10px;">☕</span>
+                                                <strong style="color: #1c5aa0; font-size: 16px;">Skip One Coffee Purchase</strong>
+                                            </div>
+                                            <div style="font-size: 14px; color: #6c757d;">Save ~$5 today and earn bonus points</div>
                                         </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #28a745; font-weight: bold;">+100 pts</div>
-                                            <button style="background: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer;" onclick="completeChallenge('coffee')">Complete</button>
+                                        <div style="text-align: right; margin-left: 20px;">
+                                            <div style="color: #28a745; font-weight: bold; margin-bottom: 8px; font-size: 14px;">+100 pts</div>
+                                            <button style="background: linear-gradient(135deg, #28a745, #20c997); color: white; border: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: transform 0.2s;" onclick="completeChallenge('coffee')">Complete</button>
                                         </div>
                                     </div>
                                 </div>
                                 
-                                <div class="challenge-item" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #ffc107;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">💡 Review Monthly Spending</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Check your spending insights for 2 minutes</div>
+                                <div class="challenge-item" style="background: white; padding: 20px; border-radius: 12px; margin-bottom: 16px; border: 1px solid #e9ecef; border-left: 4px solid #ffc107;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                        <div style="flex: 1;">
+                                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                <span style="font-size: 20px; margin-right: 10px;">💡</span>
+                                                <strong style="color: #1c5aa0; font-size: 16px;">Review Monthly Spending</strong>
+                                            </div>
+                                            <div style="font-size: 14px; color: #6c757d;">Check your spending insights for 2 minutes</div>
                                         </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #ffc107; font-weight: bold;">+75 pts</div>
-                                            <button style="background: #ffc107; color: #1c5aa0; border: none; padding: 6px 12px; border-radius: 4px; font-size: 12px; cursor: pointer;" onclick="completeChallenge('review')">Start</button>
+                                        <div style="text-align: right; margin-left: 20px;">
+                                            <div style="color: #ffc107; font-weight: bold; margin-bottom: 8px; font-size: 14px;">+75 pts</div>
+                                            <button style="background: linear-gradient(135deg, #ffc107, #ffed4e); color: #1c5aa0; border: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: transform 0.2s;" onclick="completeChallenge('review')">Start</button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="challenge-item" style="background: #d1ecf1; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 4px solid #17a2b8; opacity: 0.7;">
-                                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                                        <div>
-                                            <strong style="color: #1c5aa0;">✅ Enable Round-up Savings</strong>
-                                            <div style="font-size: 14px; color: #666; margin-top: 5px;">Turn on automatic round-ups</div>
+                                <div class="challenge-item" style="background: #f8f9fa; padding: 20px; border-radius: 12px; border: 1px solid #dee2e6; border-left: 4px solid #17a2b8; opacity: 0.8;">
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                        <div style="flex: 1;">
+                                            <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                                <span style="font-size: 20px; margin-right: 10px;">✅</span>
+                                                <strong style="color: #1c5aa0; font-size: 16px;">Enable Round-up Savings</strong>
+                                            </div>
+                                            <div style="font-size: 14px; color: #6c757d;">Turn on automatic round-ups</div>
                                         </div>
-                                        <div style="text-align: right;">
-                                            <div style="color: #28a745; font-weight: bold;">COMPLETED</div>
-                                            <div style="font-size: 12px; color: #666;">+150 pts earned</div>
+                                        <div style="text-align: right; margin-left: 20px;">
+                                            <div style="color: #28a745; font-weight: bold; margin-bottom: 4px; font-size: 14px;">COMPLETED</div>
+                                            <div style="font-size: 12px; color: #6c757d;">+150 pts earned</div>
                                         </div>
                                     </div>
                                 </div>
