@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stakeholder Engagement Strategy</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .slide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .stakeholder-matrix {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stakeholder-tier {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .stakeholder-tier:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tier-executive {
+            border-left: 5px solid #e74c3c;
+        }
+        
+        .tier-operational {
+            border-left: 5px solid #f39c12;
+        }
+        
+        .tier-project {
+            border-left: 5px solid #27ae60;
+        }
+        
+        .tier-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #1e3c72;
+        }
+        
+        .tier-frequency {
+            font-size: 1em;
+            color: #e74c3c;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .stakeholder-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .stakeholder-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+            color: #555;
+        }
+        
+        .stakeholder-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .engagement-framework {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .framework-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .framework-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .framework-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .framework-label {
+            font-size: 0.9em;
+            font-weight: 300;
+        }
+        
+        .conflict-resolution {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #007bff;
+        }
+        
+        .conflict-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        
+        .resolution-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .resolution-level {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .level-header {
+            font-weight: bold;
+            color: #007bff;
+            margin-bottom: 8px;
+        }
+        
+        .level-timeline {
+            font-size: 0.9em;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        
+        .level-process {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .customer-advisory {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .advisory-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .advisory-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            text-align: center;
+        }
+        
+        .advisory-stat {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="title">Stakeholder Engagement Strategy</div>
+            <div class="subtitle">Managing Priorities & Driving Alignment Across RBC</div>
+        </div>
+        
+        <div class="stakeholder-matrix">
+            <div class="stakeholder-tier tier-executive">
+                <div class="tier-title">Executive Level</div>
+                <div class="tier-frequency">Monthly Engagement</div>
+                <ul class="stakeholder-list">
+                    <li>CEO/President - Strategic alignment</li>
+                    <li>Chief Risk Officer - Compliance oversight</li>
+                    <li>Chief Marketing Officer - Customer acquisition</li>
+                    <li>Chief Technology Officer - Technical feasibility</li>
+                    <li>Chief Financial Officer - Budget oversight</li>
+                </ul>
+            </div>
+            
+            <div class="stakeholder-tier tier-operational">
+                <div class="tier-title">Operational Level</div>
+                <div class="tier-frequency">Bi-weekly Engagement</div>
+                <ul class="stakeholder-list">
+                    <li>Head of Digital Banking - Platform integration</li>
+                    <li>Head of Retail Banking - Product cross-sell</li>
+                    <li>Compliance Director - Regulatory requirements</li>
+                    <li>Customer Experience Director - User journey</li>
+                    <li>Data & Analytics Team - Customer insights</li>
+                </ul>
+            </div>
+            
+            <div class="stakeholder-tier tier-project">
+                <div class="tier-title">Project Level</div>
+                <div class="tier-frequency">Weekly Engagement</div>
+                <ul class="stakeholder-list">
+                    <li>Product Management - Feature prioritization</li>
+                    <li>IT Security - Data protection</li>
+                    <li>Customer Support - Integration planning</li>
+                    <li>Marketing Team - Campaign alignment</li>
+                    <li>Development Teams - Technical delivery</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="engagement-framework">
+            <div class="framework-title">Customer Co-Creation & Internal Testing Framework</div>
+            <div class="framework-grid">
+                <div class="framework-item">
+                    <div class="framework-number">25</div>
+                    <div class="framework-label">Customer Advisory Panel</div>
+                </div>
+                <div class="framework-item">
+                    <div class="framework-number">500</div>
+                    <div class="framework-label">Employee Test Users</div>
+                </div>
+                <div class="framework-item">
+                    <div class="framework-number">Monthly</div>
+                    <div class="framework-label">Feedback Sessions</div>
+                </div>
+                <div class="framework-item">
+                    <div class="framework-number">2-Week</div>
+                    <div class="framework-label">Feature Testing Cycles</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="conflict-resolution">
+            <div class="conflict-title">4-Level Conflict Resolution Framework</div>
+            <div class="resolution-levels">
+                <div class="resolution-level">
+                    <div class="level-header">Level 1: Team Conflicts</div>
+                    <div class="level-timeline">48 Hours Resolution</div>
+                    <div class="level-process">Direct discussion, product owner mediation. Example: Feature prioritization disagreements</div>
+                </div>
+                <div class="resolution-level">
+                    <div class="level-header">Level 2: Department Conflicts</div>
+                    <div class="level-timeline">1 Week Resolution</div>
+                    <div class="level-process">Department head involvement, steering committee escalation. Example: Compliance vs. timeline conflicts</div>
+                </div>
+                <div class="resolution-level">
+                    <div class="level-header">Level 3: Strategic Conflicts</div>
+                    <div class="level-timeline">2 Week Resolution</div>
+                    <div class="level-process">Executive sponsor involvement, steering committee decision. Example: Budget reallocation requests</div>
+                </div>
+                <div class="resolution-level">
+                    <div class="level-header">Level 4: Executive Conflicts</div>
+                    <div class="level-timeline">Immediate Escalation</div>
+                    <div class="level-process">CEO involvement, board consultation if required. Example: Fundamental strategy changes</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="customer-advisory">
+            <div class="advisory-title">Success Through Customer-Centric Validation</div>
+            <div class="advisory-stats">
+                <div class="advisory-stat">
+                    <div class="stat-number">80%</div>
+                    <div class="stat-label">Target Employee Participation</div>
+                </div>
+                <div class="advisory-stat">
+                    <div class="stat-number">60%</div>
+                    <div class="stat-label">Actionable Feedback Rate</div>
+                </div>
+                <div class="advisory-stat">
+                    <div class="stat-number">$500</div>
+                    <div class="stat-label">Annual Advisory Panel Incentive</div>
+                </div>
+                <div class="advisory-stat">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Cross-Department Representation</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

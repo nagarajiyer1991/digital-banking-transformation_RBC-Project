@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Banking Transformation - Vision & Roadmap</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .slide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .vision-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .vision-text {
+            font-size: 1.4em;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+        
+        .roadmap-container {
+            margin: 40px 0;
+        }
+        
+        .phase {
+            display: flex;
+            align-items: center;
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .phase:hover {
+            transform: translateY(-5px);
+        }
+        
+        .phase1 {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+        }
+        
+        .phase2 {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+        }
+        
+        .phase3 {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+        }
+        
+        .phase-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #333;
+            margin-right: 30px;
+            min-width: 80px;
+        }
+        
+        .phase-content {
+            flex: 1;
+        }
+        
+        .phase-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .phase-duration {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .phase-description {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        .key-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #1e3c72;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .feature-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .feature-desc {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        .success-metrics {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #28a745;
+        }
+        
+        .metrics-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .metric {
+            text-align: center;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #dee2e6;
+        }
+        
+        .metric-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #28a745;
+        }
+        
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="title">Digital Financial Wellness Platform</div>
+            <div class="subtitle">Vision & 18-Month Implementation Roadmap</div>
+        </div>
+        
+        <div class="vision-box">
+            <div class="vision-text">
+                Transform customer financial wellness through a standalone app using real RBC data, delivering personalized insights and tools that drive $25M incremental revenue through enhanced cross-selling opportunities while positioning RBC as the trusted financial partner of choice.
+            </div>
+        </div>
+        
+        <div class="roadmap-container">
+            <div class="phase phase1">
+                <div class="phase-number">1</div>
+                <div class="phase-content">
+                    <div class="phase-title">Requirements & Architecture</div>
+                    <div class="phase-duration">Months 1-3</div>
+                    <div class="phase-description">
+                        Comprehensive stakeholder workshops, technical architecture design, compliance framework establishment, and customer advisory panel setup. Front-loaded requirements prevent costly rework and ensure regulatory compliance from day one.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase phase2">
+                <div class="phase-number">2</div>
+                <div class="phase-content">
+                    <div class="phase-title">Agile Development with Real Data</div>
+                    <div class="phase-duration">Months 4-15</div>
+                    <div class="phase-description">
+                        Incremental feature delivery using real RBC customer data. Four sprint blocks: Core App & Data Integration → Financial Education & Insights → Savings & Goal Management → Customer Support & Advanced Features. Continuous internal testing and customer feedback integration.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phase phase3">
+                <div class="phase-number">3</div>
+                <div class="phase-content">
+                    <div class="phase-title">Controlled Launch & Integration</div>
+                    <div class="phase-duration">Months 16-18</div>
+                    <div class="phase-description">
+                        Phased customer rollout starting with 1,000 pilot customers, expanding to full customer base. Parallel planning for integration of successful features into main RBC app. Marketing campaign alignment and success measurement.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="key-features">
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <div class="feature-title">Real Data Integration</div>
+                <div class="feature-desc">Automatic categorization of actual spending, income, and account data - no manual entry required</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <div class="feature-title">Personalized Insights</div>
+                <div class="feature-desc">AI-driven financial recommendations based on individual spending patterns and goals</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏆</div>
+                <div class="feature-title">Gamified Savings</div>
+                <div class="feature-desc">Interactive challenges and achievements that encourage healthy financial behaviors</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <div class="feature-title">Financial Education</div>
+                <div class="feature-desc">Contextual learning content tailored to customer's financial situation and goals</div>
+            </div>
+        </div>
+        
+        <div class="success-metrics">
+            <div class="metrics-title">18-Month Success Targets</div>
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-number">200K+</div>
+                    <div class="metric-label">Active Users</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">$25M</div>
+                    <div class="metric-label">Incremental Revenue</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">65%</div>
+                    <div class="metric-label">Monthly Active Rate</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">4.5+</div>
+                    <div class="metric-label">App Store Rating</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">15%</div>
+                    <div class="metric-label">Deposit Growth</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number">Zero</div>
+                    <div class="metric-label">Regulatory Violations</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

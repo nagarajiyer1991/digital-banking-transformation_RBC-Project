@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Governance & Continuous Improvement</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .slide-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #1e3c72;
+            padding-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            font-weight: 300;
+        }
+        
+        .governance-pyramid {
+            text-align: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .pyramid-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 30px;
+        }
+        
+        .pyramid-container {
+            position: relative;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+        }
+        
+        .pyramid-level {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .pyramid-level:hover {
+            transform: translateX(-50%) translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .level-strategic {
+            top: 0;
+            width: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+        
+        .level-tactical {
+            top: 100px;
+            width: 350px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-color: #a8edea;
+        }
+        
+        .level-operational {
+            top: 200px;
+            width: 400px;
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            border-color: #ffecd2;
+        }
+        
+        .level-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #1e3c72;
+        }
+        
+        .level-strategic .level-title {
+            color: white;
+        }
+        
+        .level-desc {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.3;
+        }
+        
+        .level-strategic .level-desc {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .agile-framework {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .framework-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-left: 5px solid #27ae60;
+        }
+        
+        .framework-section.banking {
+            border-left-color: #3498db;
+        }
+        
+        .section-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        
+        .framework-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .framework-list li {
+            padding: 8px 0;
+            font-size: 0.9em;
+            color: #555;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .framework-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .framework-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .improvement-cycle {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .cycle-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        
+        .cycle-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .cycle-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .cycle-frequency {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .cycle-focus {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .cycle-actions {
+            font-size: 0.8em;
+            opacity: 0.8;
+            line-height: 1.3;
+        }
+        
+        .success-framework {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+            border-left: 5px solid #f39c12;
+        }
+        
+        .success-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .success-metric {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #dee2e6;
+        }
+        
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #f39c12;
+            margin-bottom: 5px;
+        }
+        
+        .metric-desc {
+            font-size: 0.85em;
+            color: #666;
+        }
+        
+        .organizational-impact {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+        
+        .impact-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #1e3c72;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+        
+        .impact-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .impact-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .impact-label {
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 5px;
+        }
+        
+        .impact-desc {
+            font-size: 0.8em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="header">
+            <div class="title">Governance & Continuous Improvement</div>
+            <div class="subtitle">Building Excellence Through Structure & Learning</div>
+        </div>
+        
+        <div class="governance-pyramid">
+            <div class="pyramid-title">Three-Tier Governance Model</div>
+            <div class="pyramid-container">
+                <div class="pyramid-level level-strategic">
+                    <div class="level-title">Strategic Level</div>
+                    <div class="level-desc">Steering Committee • Executive Sponsor • Customer Advisory Board<br>Monthly Reviews • Budget >$500K • Strategic Decisions</div>
+                </div>
+                <div class="pyramid-level level-tactical">
+                    <div class="level-title">Tactical Level</div>
+                    <div class="level-desc">PMO • Architecture Review Board • Change Control Board<br>Bi-weekly Reviews • Technical Standards • Resource Management</div>
+                </div>
+                <div class="pyramid-level level-operational">
+                    <div class="level-title">Operational Level</div>
+                    <div class="level-desc">Agile Teams • Quality Assurance • Customer Feedback Integration<br>Daily Coordination • Sprint Execution • Continuous Delivery</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="agile-framework">
+            <div class="framework-section">
+                <div class="section-title">Scaled Agile Framework</div>
+                <ul class="framework-list">
+                    <li>Cross-functional teams with embedded specialists</li>
+                    <li>2-week sprints with customer feedback integration</li>
+                    <li>Quarterly program increment planning</li>
+                    <li>Continuous integration across teams</li>
+                    <li>Real-time dashboards and automated reporting</li>
+                    <li>Customer advisory panel in major reviews</li>
+                </ul>
+            </div>
+            
+            <div class="framework-section banking">
+                <div class="section-title">Banking-Specific Adaptations</div>
+                <ul class="framework-list">
+                    <li>Compliance integration parallel to development</li>
+                    <li>Risk-based backlog prioritization</li>
+                    <li>Privacy-by-design principles</li>
+                    <li>Continuous audit readiness</li>
+                    <li>Regulatory review in every sprint</li>
+                    <li>Security-first development approach</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="improvement-cycle">
+            <div class="cycle-title">Continuous Improvement Framework</div>
+            <div class="cycle-grid">
+                <div class="cycle-item">
+                    <div class="cycle-frequency">Sprint Level</div>
+                    <div class="cycle-focus">Bi-weekly Learning</div>
+                    <div class="cycle-actions">Team retrospectives • Customer feedback integration • Technical debt management • Process optimization</div>
+                </div>
+                <div class="cycle-item">
+                    <div class="cycle-frequency">Release Level</div>
+                    <div class="cycle-focus">Monthly Assessment</div>
+                    <div class="cycle-actions">Feature performance review • Development velocity • Quality metrics • Best practice documentation</div>
+                </div>
+                <div class="cycle-item">
+                    <div class="cycle-frequency">Strategic Level</div>
+                    <div class="cycle-focus">Quarterly Evolution</div>
+                    <div class="cycle-actions">Business value assessment • Capability building • Future roadmap • Organizational learning</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="success-framework">
+            <div class="success-title">Governance Success Metrics</div>
+            <div class="success-grid">
+                <div class="success-metric">
+                    <div class="metric-value">48hr</div>
+                    <div class="metric-desc">Average Decision Time</div>
+                </div>
+                <div class="success-metric">
+                    <div class="metric-value">95%</div>
+                    <div class="metric-desc">Stakeholder Satisfaction</div>
+                </div>
+                <div class="success-metric">
+                    <div class="metric-value">90%</div>
+                    <div class="metric-desc">Sprint Goal Achievement</div>
+                </div>
+                <div class="success-metric">
+                    <div class="metric-value">5+</div>
+                    <div class="metric-desc">Process Improvements/Month</div>
+                </div>
+                <div class="success-metric">
+                    <div class="metric-value">100%</div>
+                    <div class="metric-desc">Compliance Adherence</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="organizational-impact">
+            <div class="impact-title">Long-Term Organizational Benefits</div>
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <div class="impact-icon">🚀</div>
+                    <div class="impact-label">Digital Maturity</div>
+                    <div class="impact-desc">Enhanced organizational digital capabilities</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">⚡</div>
+                    <div class="impact-label">Agile Adoption</div>
+                    <div class="impact-desc">Successful agile practices across organization</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">💡</div>
+                    <div class="impact-label">Innovation Culture</div>
+                    <div class="impact-desc">Increased experimentation and learning</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">🔄</div>
+                    <div class="impact-label">Change Readiness</div>
+                    <div class="impact-desc">Enhanced ability to adapt and evolve</div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-icon">📈</div>
+                    <div class="impact-label">Capability Building</div>
+                    <div class="impact-desc">Reusable skills for future initiatives</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
