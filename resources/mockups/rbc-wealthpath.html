@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RBC Online Banking - Financial Wellness Integration</title>
+    <title>RBC WealthPath - Your Journey to Financial Wellness</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
@@ -21,10 +21,10 @@
         
         /* RBC Header */
         .rbc-header {
-            background: #1c5aa0;
+            background: rgb(0, 106, 194);
             color: white;
             padding: 15px 0;
-            border-bottom: 3px solid #144a87;
+            border-bottom: 3px solid rgb(0, 85, 156);
         }
         
         .header-content {
@@ -52,7 +52,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #1c5aa0;
+            color: rgb(0, 106, 194);
             font-weight: bold;
             font-size: 14px;
         }
@@ -69,7 +69,7 @@
         
         .sign-out-btn {
             background: #ffd700;
-            color: #1c5aa0;
+            color: rgb(0, 106, 194);
             padding: 8px 16px;
             border: none;
             border-radius: 4px;
@@ -80,9 +80,9 @@
         
         /* Navigation */
         .main-nav {
-            background: #1c5aa0;
+            background: rgb(0, 106, 194);
             padding: 10px 0;
-            border-bottom: 1px solid #144a87;
+            border-bottom: 1px solid rgb(0, 85, 156);
         }
         
         .nav-content {
@@ -135,9 +135,9 @@
         }
         
         .breadcrumb-link.active {
-            background: #1c5aa0;
+            background: rgb(0, 106, 194);
             color: white;
-            border-color: #1c5aa0;
+            border-color: rgb(0, 106, 194);
         }
         
         /* Main Content */
@@ -157,7 +157,7 @@
         }
         
         .section-header {
-            background: linear-gradient(135deg, #2c5aa0 0%, #1c4a90 100%);
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
             color: white;
             padding: 20px 25px;
             border-radius: 8px 8px 0 0;
@@ -226,7 +226,7 @@
         
         .account-name {
             font-size: 16px;
-            color: #1c5aa0;
+            color: rgb(0, 106, 194);
             text-decoration: none;
             font-weight: 500;
             margin-bottom: 4px;
@@ -253,18 +253,18 @@
         
         /* Financial Wellness Section - NEW */
         .wellness-section {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
             border-radius: 8px;
             margin-top: 20px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 106, 194, 0.2);
             cursor: pointer;
             transition: all 0.3s ease;
         }
         
         .wellness-section:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+            box-shadow: 0 6px 20px rgba(0, 106, 194, 0.3);
         }
         
         .wellness-header {
@@ -318,7 +318,7 @@
         
         .wellness-cta:hover {
             background: white;
-            color: #28a745;
+            color: rgb(0, 106, 194);
         }
         
         .wellness-preview {
@@ -393,7 +393,7 @@
         .quick-action {
             display: block;
             padding: 12px 0;
-            color: #1c5aa0;
+            color: rgb(0, 106, 194);
             text-decoration: none;
             border-bottom: 1px solid #eee;
             font-size: 14px;
@@ -405,7 +405,7 @@
         }
         
         .quick-action:hover {
-            color: #144a87;
+            color: rgb(0, 85, 156);
         }
         
         .nomi-insights {
@@ -474,7 +474,7 @@
         }
         
         .wellness-modal-header {
-            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
             color: white;
             padding: 20px 30px;
             display: flex;
@@ -679,6 +679,61 @@
             font-weight: bold;
             color: #28a745;
         }
+
+        /* Tab Content Styles */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Switch Toggle Styles */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #28a745;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
         
         /* Responsive */
         @media (max-width: 768px) {
@@ -703,7 +758,7 @@
                 Royal Bank
             </div>
             <div class="user-nav">
-                <span class="user-name">NAGARAJAN KRISHNAN IYER</span>
+                <span class="user-name">NIRUPAMA IYER</span>
                 <button class="sign-out-btn">Sign Out</button>
             </div>
         </div>
@@ -734,7 +789,7 @@
         <section class="accounts-section">
             <div class="section-header">
                 <div>
-                    <div class="greeting">Good Evening, NAGARAJAN KRISHNAN IYER</div>
+                    <div class="greeting">Good Evening, NIRUPAMA IYER</div>
                     <h1 class="section-title">Accounts Summary</h1>
                 </div>
                 <div class="date-info">September 4, 2024</div>
@@ -745,26 +800,26 @@
                 <div class="account-category">
                     <div class="category-header">
                         Bank Accounts
-                        <div class="category-total">$24,511.12 <span class="currency">CAD</span></div>
+                        <div class="category-total">$••,•••.•• <span class="currency">CAD</span></div>
                     </div>
                     
                     <div class="account-item">
                         <div class="account-info">
                             <a href="#" class="account-name">RBC Advantage Banking</a>
-                            <div class="account-details">Chequing 02931-5646112</div>
+                            <div class="account-details">Chequing ••••-••••••2</div>
                         </div>
                         <div class="account-balance">
-                            $24,511.12 <span class="currency">CAD</span>
+                            $••,•••.•• <span class="currency">CAD</span>
                         </div>
                     </div>
                     
                     <div class="account-item">
                         <div class="account-info">
                             <a href="#" class="account-name">RBC High Interest eSavings</a>
-                            <div class="account-details">Savings 02931-5646120</div>
+                            <div class="account-details">Savings ••••-••••••0</div>
                         </div>
                         <div class="account-balance">
-                            $0.00 <span class="currency">CAD</span>
+                            $•.•• <span class="currency">CAD</span>
                         </div>
                     </div>
                 </div>
@@ -773,16 +828,16 @@
                 <div class="account-category">
                     <div class="category-header">
                         Credit Cards
-                        <div class="category-total">$0.00 <span class="currency">CAD</span></div>
+                        <div class="category-total">$•.•• <span class="currency">CAD</span></div>
                     </div>
                     
                     <div class="account-item">
                         <div class="account-info">
                             <a href="#" class="account-name">RBC ION Visa</a>
-                            <div class="account-details">Visa 4510 •••• •••• 4171</div>
+                            <div class="account-details">Visa •••• •••• •••• ••••</div>
                         </div>
                         <div class="account-balance">
-                            $0.00 <span class="currency">CAD</span>
+                            $•.•• <span class="currency">CAD</span>
                         </div>
                     </div>
                 </div>
@@ -811,14 +866,14 @@
                     <div class="new-badge">NEW</div>
                     <div class="wellness-title">
                         <i class="fas fa-chart-line"></i>
-                        Financial Wellness Platform
+                        RBC WealthPath
                     </div>
                     <div class="wellness-subtitle">
-                        Get personalized insights, track your financial health, and achieve your goals
+                        Your journey to financial wellness, guided every step
                     </div>
                     <button class="wellness-cta">
                         <i class="fas fa-rocket"></i>
-                        Launch Your Wellness Journey
+                        Start Your WealthPath Journey
                     </button>
                 </div>
                 <div class="wellness-preview">
@@ -872,7 +927,7 @@
             <div class="wellness-modal-header">
                 <h2 class="modal-title">
                     <i class="fas fa-chart-line"></i>
-                    RBC Financial Wellness Platform
+                    RBC WealthPath
                 </h2>
                 <button class="close-btn" onclick="closeWellnessApp()">×</button>
             </div>
@@ -900,6 +955,7 @@
                 </div>
 
                 <!-- Dashboard Content -->
+                <div id="dashboard-tab" class="tab-content active">
                 <div class="dashboard-grid">
                     <!-- Financial Health Score -->
                     <div class="dashboard-card">
@@ -1089,6 +1145,374 @@
                         </div>
                     </div>
                 </div>
+                </div>
+
+                <!-- Goals & Savings Tab -->
+                <div id="goals-tab" class="tab-content">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon goals-icon">
+                                    <i class="fas fa-bullseye"></i>
+                                </div>
+                                <h3 class="card-title">Create New Goal</h3>
+                            </div>
+                            <form class="goal-form">
+                                <input type="text" placeholder="Goal Name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="number" placeholder="Target Amount" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
+                                <input type="date" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 4px;">
+                                <button type="submit" style="width: 100%; padding: 12px; background: rgb(0, 106, 194); color: white; border: none; border-radius: 4px; cursor: pointer;">Create Goal</button>
+                            </form>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon savings-icon">
+                                    <i class="fas fa-piggy-bank"></i>
+                                </div>
+                                <h3 class="card-title">Automated Savings</h3>
+                            </div>
+                            <div class="savings-settings">
+                                <div class="metric-row">
+                                    <span>Weekly Auto-Save</span>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="metric-row">
+                                    <span>Round-up Purchases</span>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </div>
+                                <div class="metric-row">
+                                    <span>Monthly Transfer</span>
+                                    <input type="number" value="500" style="width: 80px; padding: 5px; border: 1px solid #ddd; border-radius: 4px;">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="card-title">Savings Performance</h3>
+                            </div>
+                            <canvas id="savingsChart" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spending Insights Tab -->
+                <div id="spending-tab" class="tab-content">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon spending-icon">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                                <h3 class="card-title">Spending by Category</h3>
+                            </div>
+                            <canvas id="spendingChart" width="400" height="300"></canvas>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #dc3545, #c82333); color: white;">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h3 class="card-title">Budget Alerts</h3>
+                            </div>
+                            <div class="alert-item" style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                                <strong>⚠️ Dining Budget Alert</strong><br>
+                                You've spent $890 of your $800 dining budget this month.
+                            </div>
+                            <div class="alert-item" style="background: #d1ecf1; border: 1px solid #bee5eb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                                <strong>✅ Transportation On Track</strong><br>
+                                Great job! You're under budget by $150 this month.
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white;">
+                                    <i class="fas fa-calendar-alt"></i>
+                                </div>
+                                <h3 class="card-title">Monthly Trends</h3>
+                            </div>
+                            <canvas id="trendsChart" width="400" height="200"></canvas>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #fd7e14, #e55a2b); color: white;">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+                                <h3 class="card-title">Recent Transactions</h3>
+                            </div>
+                            <div class="transaction-list">
+                                <div class="transaction-item" style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Starbucks</strong><br>
+                                        <small style="color: #666;">Sep 4, 2024 • Food & Dining</small>
+                                    </div>
+                                    <span style="color: #dc3545; font-weight: bold;">-$5.75</span>
+                                </div>
+                                <div class="transaction-item" style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Shell Gas Station</strong><br>
+                                        <small style="color: #666;">Sep 3, 2024 • Transportation</small>
+                                    </div>
+                                    <span style="color: #dc3545; font-weight: bold;">-$45.20</span>
+                                </div>
+                                <div class="transaction-item" style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Metro Grocery</strong><br>
+                                        <small style="color: #666;">Sep 2, 2024 • Groceries</small>
+                                    </div>
+                                    <span style="color: #dc3545; font-weight: bold;">-$87.45</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Education Tab -->
+                <div id="education-tab" class="tab-content">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #17a2b8, #138496); color: white;">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <h3 class="card-title">Featured Videos</h3>
+                            </div>
+                            <div class="video-grid">
+                                <div class="video-item" style="margin: 15px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px; cursor: pointer;" onclick="playVideo('budgeting-basics')">
+                                    <img src="https://img.youtube.com/vi/HQzonoMjbxw/mqdefault.jpg" alt="Budgeting Basics" style="width: 100%; border-radius: 4px;">
+                                    <h4 style="margin: 10px 0 5px 0;">Budgeting Basics for Beginners</h4>
+                                    <p style="font-size: 14px; color: #666;">Learn the fundamentals of creating and maintaining a budget</p>
+                                </div>
+                                <div class="video-item" style="margin: 15px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px; cursor: pointer;" onclick="playVideo('investing-101')">
+                                    <img src="https://img.youtube.com/vi/fwe-PjrX23o/mqdefault.jpg" alt="Investing 101" style="width: 100%; border-radius: 4px;">
+                                    <h4 style="margin: 10px 0 5px 0;">Investing 101: Getting Started</h4>
+                                    <p style="font-size: 14px; color: #666;">Your guide to beginning your investment journey</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3 class="card-title">Learning Modules</h3>
+                            </div>
+                            <div class="module-list">
+                                <div class="module-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Emergency Fund Planning</strong><br>
+                                        <small style="color: #666;">Build your safety net • 15 min</small>
+                                    </div>
+                                    <span style="background: #28a745; color: white; padding: 4px 8px; border-radius: 12px; font-size: 12px;">✓ Completed</span>
+                                </div>
+                                <div class="module-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Credit Score Improvement</strong><br>
+                                        <small style="color: #666;">Boost your credit rating • 20 min</small>
+                                    </div>
+                                    <button style="background: rgb(0, 106, 194); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Start</button>
+                                </div>
+                                <div class="module-item" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #eee;">
+                                    <div>
+                                        <strong>Retirement Planning</strong><br>
+                                        <small style="color: #666;">Plan for your future • 25 min</small>
+                                    </div>
+                                    <button style="background: rgb(0, 106, 194); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;">Start</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white;">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <h3 class="card-title">Recommended Reading</h3>
+                            </div>
+                            <div class="reading-list">
+                                <div class="article-item" style="padding: 15px 0; border-bottom: 1px solid #eee;">
+                                    <h4 style="color: rgb(0, 106, 194); margin-bottom: 5px;">The 50/30/20 Rule: A Simple Budgeting Method</h4>
+                                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Learn how to allocate your income effectively using this popular budgeting strategy.</p>
+                                    <small style="color: #999;">5 min read • RBC Financial Education</small>
+                                </div>
+                                <div class="article-item" style="padding: 15px 0; border-bottom: 1px solid #eee;">
+                                    <h4 style="color: rgb(0, 106, 194); margin-bottom: 5px;">Understanding Compound Interest</h4>
+                                    <p style="font-size: 14px; color: #666; margin-bottom: 10px;">Discover how compound interest can work for you in building wealth.</p>
+                                    <small style="color: #999;">8 min read • RBC Investment Tips</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #fd7e14, #e55a2b); color: white;">
+                                    <i class="fas fa-video"></i>
+                                </div>
+                                <h3 class="card-title">More Educational Videos</h3>
+                            </div>
+                            <div class="video-grid">
+                                <div class="video-item" style="margin: 15px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px; cursor: pointer;" onclick="playVideo('debt-management')">
+                                    <img src="https://img.youtube.com/vi/R7cSHZkHb9k/mqdefault.jpg" alt="Debt Management" style="width: 100%; border-radius: 4px;">
+                                    <h4 style="margin: 10px 0 5px 0;">Debt Management Strategies</h4>
+                                    <p style="font-size: 14px; color: #666;">Effective methods to manage and reduce your debt</p>
+                                </div>
+                                <div class="video-item" style="margin: 15px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px; cursor: pointer;" onclick="playVideo('mortgage-tips')">
+                                    <img src="https://img.youtube.com/vi/dhHlqjrv7jQ/mqdefault.jpg" alt="Mortgage Tips" style="width: 100%; border-radius: 4px;">
+                                    <h4 style="margin: 10px 0 5px 0;">First-Time Home Buyer Tips</h4>
+                                    <p style="font-size: 14px; color: #666;">Navigate the home buying process with confidence</p>
+                                </div>
+                                <div class="video-item" style="margin: 15px 0; padding: 15px; border: 1px solid #eee; border-radius: 8px; cursor: pointer;" onclick="playVideo('tax-planning')">
+                                    <img src="https://img.youtube.com/vi/Fvzar6OeLNk/mqdefault.jpg" alt="Tax Planning" style="width: 100%; border-radius: 4px;">
+                                    <h4 style="margin: 10px 0 5px 0;">Tax Planning Fundamentals</h4>
+                                    <p style="font-size: 14px; color: #666;">Maximize your tax savings with smart planning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommendations Tab -->
+                <div id="recommendations-tab" class="tab-content">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #28a745, #20c997); color: white;">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <h3 class="card-title">Personalized Recommendations</h3>
+                            </div>
+                            <div class="recommendation-item" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #28a745;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <i class="fas fa-piggy-bank" style="color: #28a745; margin-right: 10px; font-size: 18px;"></i>
+                                    <strong style="color: #1c5aa0;">High-Interest Savings Opportunity</strong>
+                                </div>
+                                <p style="margin-bottom: 15px; color: #666;">Move $15,000 from your chequing to RBC High Interest eSavings to earn an additional $450 annually.</p>
+                                <div style="display: flex; gap: 10px;">
+                                    <button style="background: #28a745; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Apply Now</button>
+                                    <button style="background: white; color: #666; border: 1px solid #ddd; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Learn More</button>
+                                </div>
+                            </div>
+                            
+                            <div class="recommendation-item" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #007bff;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <i class="fas fa-chart-line" style="color: #007bff; margin-right: 10px; font-size: 18px;"></i>
+                                    <strong style="color: #1c5aa0;">Investment Portfolio Review</strong>
+                                </div>
+                                <p style="margin-bottom: 15px; color: #666;">Consider diversifying your down payment savings with a balanced growth portfolio for potentially higher returns.</p>
+                                <div style="display: flex; gap: 10px;">
+                                    <button style="background: #007bff; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Book Consultation</button>
+                                    <button style="background: white; color: #666; border: 1px solid #ddd; padding: 8px 16px; border-radius: 4px; cursor: pointer;">View Options</button>
+                                </div>
+                            </div>
+
+                            <div class="recommendation-item" style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 15px 0; border-left: 4px solid #ffc107;">
+                                <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                    <i class="fas fa-shield-alt" style="color: #ffc107; margin-right: 10px; font-size: 18px;"></i>
+                                    <strong style="color: #1c5aa0;">Insurance Coverage Gap</strong>
+                                </div>
+                                <p style="margin-bottom: 15px; color: #666;">Based on your financial profile, consider increasing your life insurance coverage to protect your growing assets.</p>
+                                <div style="display: flex; gap: 10px;">
+                                    <button style="background: #ffc107; color: #1c5aa0; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Get Quote</button>
+                                    <button style="background: white; color: #666; border: 1px solid #ddd; padding: 8px 16px; border-radius: 4px; cursor: pointer;">Calculate Needs</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #6f42c1, #5c2e95); color: white;">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="card-title">Goal-Based Recommendations</h3>
+                            </div>
+                            <div class="goal-recommendation" style="margin: 15px 0;">
+                                <h4 style="color: #1c5aa0; margin-bottom: 10px;">Emergency Fund (90% Complete)</h4>
+                                <p style="color: #666; margin-bottom: 10px;">You're almost there! Consider these final steps:</p>
+                                <ul style="color: #666; margin-left: 20px;">
+                                    <li>Automate $200/month to reach your goal faster</li>
+                                    <li>Move funds to a high-yield savings account</li>
+                                    <li>Set up account alerts for fund balance</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="goal-recommendation" style="margin: 15px 0; padding-top: 15px; border-top: 1px solid #eee;">
+                                <h4 style="color: #1c5aa0; margin-bottom: 10px;">Vacation Fund (52% Complete)</h4>
+                                <p style="color: #666; margin-bottom: 10px;">Boost your vacation savings with:</p>
+                                <ul style="color: #666; margin-left: 20px;">
+                                    <li>Round-up purchases feature (+$50/month)</li>
+                                    <li>Weekly coffee shop budget reduction</li>
+                                    <li>Side income allocation strategy</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #dc3545, #c82333); color: white;">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                </div>
+                                <h3 class="card-title">Action Required</h3>
+                            </div>
+                            <div class="action-item" style="background: #fff3cd; border: 1px solid #ffeaa7; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                                <strong style="color: #856404;">Review Your Credit Report</strong><br>
+                                <small style="color: #856404;">It's been 6 months since your last review. Check for any changes or errors.</small><br>
+                                <button style="background: #ffc107; color: #1c5aa0; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-top: 8px;">View Report</button>
+                            </div>
+                            
+                            <div class="action-item" style="background: #d1ecf1; border: 1px solid #bee5eb; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                                <strong style="color: #0c5460;">Tax Season Preparation</strong><br>
+                                <small style="color: #0c5460;">Start organizing your documents for next tax season. Book a consultation.</small><br>
+                                <button style="background: #17a2b8; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; margin-top: 8px;">Book Appointment</button>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <div class="card-icon" style="background: linear-gradient(135deg, #fd7e14, #e55a2b); color: white;">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <h3 class="card-title">Smart Tips</h3>
+                            </div>
+                            <div class="tip-item" style="padding: 15px 0; border-bottom: 1px solid #eee;">
+                                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-size: 20px; margin-right: 10px;">💡</span>
+                                    <strong style="color: #1c5aa0;">Automate Your Success</strong>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">Set up automatic transfers on payday to never miss your savings goals.</p>
+                            </div>
+                            
+                            <div class="tip-item" style="padding: 15px 0; border-bottom: 1px solid #eee;">
+                                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-size: 20px; margin-right: 10px;">📱</span>
+                                    <strong style="color: #1c5aa0;">Use Mobile Alerts</strong>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">Enable spending alerts to stay on track with your budget in real-time.</p>
+                            </div>
+                            
+                            <div class="tip-item" style="padding: 15px 0;">
+                                <div style="display: flex; align-items: center; margin-bottom: 8px;">
+                                    <span style="font-size: 20px; margin-right: 10px;">🎯</span>
+                                    <strong style="color: #1c5aa0;">Review Monthly</strong>
+                                </div>
+                                <p style="font-size: 14px; color: #666;">Schedule monthly financial check-ins to adjust your strategy as needed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -1126,11 +1550,56 @@
         }
 
         // Tab switching functionality
-        document.querySelectorAll('.nav-tab').forEach(tab => {
+        document.querySelectorAll('.nav-tab').forEach((tab, index) => {
             tab.addEventListener('click', () => {
+                // Remove active class from all tabs and content
                 document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked tab
                 tab.classList.add('active');
+                
+                // Show corresponding tab content
+                const tabNames = ['dashboard-tab', 'goals-tab', 'spending-tab', 'education-tab', 'recommendations-tab'];
+                document.getElementById(tabNames[index]).classList.add('active');
+                
+                // Initialize charts when switching to spending insights tab
+                if (index === 2) {
+                    setTimeout(() => {
+                        initializeCharts();
+                    }, 100);
+                }
             });
+        });
+
+        // Video player functionality
+        function playVideo(videoId) {
+            alert(`Opening video: ${videoId}\n\nIn a real implementation, this would open the video player with the selected educational content.`);
+        }
+
+        // Chart initialization (mock data for demo)
+        function initializeCharts() {
+            // Mock chart implementation - in real app would use Chart.js or similar
+            const charts = document.querySelectorAll('canvas');
+            charts.forEach(canvas => {
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = 'rgb(0, 106, 194)';
+                ctx.fillRect(10, 10, 100, 50);
+                ctx.fillStyle = '#fff';
+                ctx.font = '14px Arial';
+                ctx.fillText('Chart Data', 20, 35);
+            });
+        }
+
+        // Goal form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const goalForm = document.querySelector('.goal-form');
+            if (goalForm) {
+                goalForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Goal created successfully! In a real implementation, this would save your new financial goal.');
+                });
+            }
         });
 
         // Initialize animations
