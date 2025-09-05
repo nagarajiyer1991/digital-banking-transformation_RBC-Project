@@ -1164,85 +1164,6 @@
             box-shadow: 0 6px 20px rgba(0, 106, 194, 0.3);
         }
         
-        /* Integrated Chat Styles */
-        .integrated-chat-widget {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .widget-header {
-            background: linear-gradient(135deg, rgb(0, 106, 194), rgb(0, 85, 156));
-            color: white;
-            padding: 16px 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .widget-title {
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
-        
-        .widget-messages {
-            flex: 1;
-            padding: 20px;
-            overflow-y: auto;
-            background: #f8f9fa;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        
-        .widget-input-area {
-            padding: 16px 20px;
-            border-top: 1px solid #e9ecef;
-            background: white;
-        }
-        
-        .widget-input-container {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-        
-        .widget-input {
-            flex: 1;
-            border: 2px solid #e9ecef;
-            border-radius: 20px;
-            padding: 10px 16px;
-            font-size: 14px;
-            outline: none;
-            transition: border-color 0.3s ease;
-        }
-        
-        .widget-input:focus {
-            border-color: rgb(0, 106, 194);
-        }
-        
-        .widget-send-btn {
-            background: rgb(0, 106, 194);
-            border: none;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease;
-        }
-        
-        .widget-send-btn:hover {
-            background: rgb(0, 85, 156);
-        }
         
         /* Professional Goals Styles */
         .goals-overview {
@@ -1959,30 +1880,6 @@
                         </div>
 
                         <div class="sidebar-area">
-                            <!-- Integrated Chatbox Widget -->
-                            <div class="integrated-chat-widget">
-                                <div class="widget-header">
-                                    <i class="fas fa-robot"></i>
-                                    <h3 class="widget-title">Financial Assistant</h3>
-                                </div>
-                                <div class="widget-messages" id="widgetMessages">
-                                    <div class="chat-message bot-message">
-                                        <div class="message-avatar bot-avatar">RB</div>
-                                        <div class="message-bubble">
-                                            Hi! I'm here to help with your savings goals. Ask me about budgeting, goal strategies, or automated savings!
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="widget-input-area">
-                                    <div class="widget-input-container">
-                                        <input type="text" class="widget-input" placeholder="Ask about savings goals..." id="widgetInput" onkeypress="handleWidgetKeyPress(event)">
-                                        <button class="widget-send-btn" onclick="sendWidgetMessage()">
-                                            <i class="fas fa-paper-plane"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
                             <!-- Smart Savings Settings -->
                             <div class="dashboard-card">
                                 <div class="card-header">
@@ -2774,67 +2671,6 @@
             alert('📊 Financial Report Download\n\nIn a real implementation, this would generate and download your personalized financial report including:\n\n• Account summaries\n• Spending analysis\n• Goal progress\n• Investment performance\n• Recommendations');
         }
 
-        // Widget Chat functionality
-        function sendWidgetMessage() {
-            const input = document.getElementById('widgetInput');
-            const message = input.value.trim();
-            
-            if (message) {
-                addWidgetMessage(message, 'user');
-                input.value = '';
-                
-                setTimeout(() => {
-                    respondToWidgetUser(message);
-                }, 800);
-            }
-        }
-        
-        function handleWidgetKeyPress(event) {
-            if (event.key === 'Enter') {
-                sendWidgetMessage();
-            }
-        }
-        
-        function addWidgetMessage(text, sender) {
-            const messagesContainer = document.getElementById('widgetMessages');
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `chat-message ${sender}-message`;
-            
-            const avatar = document.createElement('div');
-            avatar.className = `message-avatar ${sender}-avatar`;
-            avatar.textContent = sender === 'user' ? 'YOU' : 'RB';
-            
-            const bubble = document.createElement('div');
-            bubble.className = 'message-bubble';
-            bubble.innerHTML = text;
-            
-            messageDiv.appendChild(avatar);
-            messageDiv.appendChild(bubble);
-            messagesContainer.appendChild(messageDiv);
-            
-            messagesContainer.scrollTop = messagesContainer.scrollHeight;
-        }
-        
-        function respondToWidgetUser(userMessage) {
-            const lowerMessage = userMessage.toLowerCase();
-            let response = '';
-            
-            if (lowerMessage.includes('goal') || lowerMessage.includes('save')) {
-                response = "Great question about savings goals! I see you're 90% complete on your Emergency Fund and 53% on your Vacation Fund. Would you like tips on reaching your targets faster?";
-            } else if (lowerMessage.includes('budget') || lowerMessage.includes('automat')) {
-                response = "For automated savings, I recommend: 1) Enable round-up purchases for effortless saving, 2) Set up weekly auto-transfers, 3) Use the challenge mode to boost your monthly transfers. Which interests you most?";
-            } else if (lowerMessage.includes('help') || lowerMessage.includes('tip')) {
-                response = "I can help with: Setting up new savings goals, optimizing your automated savings, tracking goal progress, and providing personalized saving strategies. What would you like to focus on?";
-            } else if (lowerMessage.includes('emergency')) {
-                response = "Your Emergency Fund is at $18,000 of $20,000 (90% complete)! You're almost there. Consider increasing your weekly auto-save by $10 to reach this goal 4 weeks sooner.";
-            } else if (lowerMessage.includes('vacation')) {
-                response = "Your Vacation Fund needs $3,800 more to reach $8,000. Enable round-up purchases (+$47/month) and increase auto-transfer to $550/month to reach your goal 6 months earlier!";
-            } else {
-                response = "I understand you're asking about: \"" + userMessage + "\". As your financial assistant, I can help with goal setting, automated savings, budget optimization, and progress tracking. What specific area interests you?";
-            }
-            
-            addWidgetMessage(response, 'bot');
-        }
     </script>
 </body>
 </html>
