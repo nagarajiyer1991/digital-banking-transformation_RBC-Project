@@ -1,0 +1,32 @@
+{
+  "name": "RBC Digital Banking",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "postCreateCommand": "npm install -g http-server",
+  "forwardPorts": [8080, 8000, 3000],
+  "portsAttributes": {
+    "8080": {
+      "label": "RBC WealthPath App",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "Static Server",
+      "onAutoForward": "openBrowser"
+    },
+    "3000": {
+      "label": "Development Server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.live-server"
+      ]
+    }
+  }
+}
