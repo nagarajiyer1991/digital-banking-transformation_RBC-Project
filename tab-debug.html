@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tab Debug</title>
+</head>
+<body>
+    <h1>Debug: Check Tab Structure</h1>
+    <script>
+        // Load the main HTML file and check tab structure
+        fetch('./resources/mockups/rbc-wealthpath.html')
+            .then(response => response.text())
+            .then(html => {
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(html, 'text/html');
+                
+                console.log('=== TAB CONTENT ELEMENTS ===');
+                const tabContents = doc.querySelectorAll('.tab-content');
+                tabContents.forEach((tab, index) => {
+                    console.log(`Tab ${index}: ID="${tab.id}", Classes="${tab.className}"`);
+                });
+                
+                console.log('\n=== NAV TAB BUTTONS ===');
+                const navTabs = doc.querySelectorAll('.nav-tab');
+                navTabs.forEach((tab, index) => {
+                    console.log(`Button ${index}: Text="${tab.textContent.trim()}"`);
+                });
+                
+                // Show results on page
+                const results = document.getElementById('results');
+                results.innerHTML = `
+                    <h2>Tab Content Elements Found: ${tabContents.length}</h2>
+                    ${Array.from(tabContents).map((tab, i) => 
+                        `<p>Tab ${i}: ID="${tab.id}", Active="${tab.classList.contains('active')}"</p>`
+                    ).join('')}
+                    
+                    <h2>Nav Tab Buttons Found: ${navTabs.length}</h2>
+                    ${Array.from(navTabs).map((tab, i) => 
+                        `<p>Button ${i}: "${tab.textContent.trim()}"</p>`
+                    ).join('')}
+                `;
+            });
+    </script>
+    
+    <div id="results">Loading...</div>
+</body>
+</html>

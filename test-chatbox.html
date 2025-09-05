@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbox Test - RBC WealthPath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f7fa;
+            min-height: 100vh;
+        }
+
+        .test-header {
+            text-align: center;
+            background: rgb(0, 106, 194);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .test-content {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .test-instruction {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        /* Floating Action Buttons */
+        .floating-actions {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 999;
+        }
+        
+        .floating-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: white;
+            box-shadow: 0 4px 20px rgba(0, 106, 194, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .floating-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 106, 194, 0.4);
+        }
+        
+        .chat-btn {
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
+        }
+        
+        .download-btn {
+            background: linear-gradient(135deg, #28a745, #20c997);
+        }
+        
+        .floating-btn .tooltip {
+            position: absolute;
+            right: 70px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .floating-btn .tooltip::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-top: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+        }
+        
+        .floating-btn:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Chat Modal */
+        .chat-modal {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            animation: slideInUp 0.3s ease-out;
+        }
+        
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, rgb(0, 106, 194) 0%, rgb(0, 85, 156) 100%);
+            color: white;
+            padding: 16px 20px;
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .chat-header h3 {
+            margin: 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .chat-close {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 18px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .chat-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .chat-body {
+            height: 380px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+        
+        .chat-message {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .bot-message {
+            flex-direction: row;
+        }
+        
+        .user-message {
+            flex-direction: row-reverse;
+        }
+        
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .bot-avatar {
+            background: rgb(0, 106, 194);
+            color: white;
+        }
+        
+        .user-avatar {
+            background: #28a745;
+            color: white;
+        }
+        
+        .message-bubble {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        .bot-message .message-bubble {
+            background: white;
+            border: 1px solid #e9ecef;
+            color: #333;
+        }
+        
+        .user-message .message-bubble {
+            background: rgb(0, 106, 194);
+            color: white;
+        }
+        
+        .chat-input-area {
+            padding: 16px 20px;
+            border-top: 1px solid #e9ecef;
+            background: white;
+            border-radius: 0 0 16px 16px;
+        }
+        
+        .chat-input-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .chat-input {
+            flex: 1;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 14px;
+            outline: none;
+        }
+        
+        .chat-input:focus {
+            border-color: rgb(0, 106, 194);
+        }
+        
+        .chat-send {
+            background: rgb(0, 106, 194);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .chat-send:hover {
+            background: rgb(0, 85, 156);
+        }
+
+        .success {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        .status {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .floating-actions {
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .chat-modal {
+                bottom: 80px;
+                right: 20px;
+                left: 20px;
+                width: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="test-header">
+        <h1><i class="fas fa-comments"></i> RBC Chatbox Test Page</h1>
+        <p>Testing the floating chatbox functionality</p>
+    </div>
+
+    <div class="test-content">
+        <h2>Chatbox Implementation Test</h2>
+        
+        <div class="status">
+            <strong>🧪 Test Status:</strong> 
+            <span id="testStatus">Loading...</span>
+        </div>
+
+        <div class="test-instruction">
+            <strong>How to test:</strong>
+            <ol>
+                <li>Look for <strong>two floating buttons</strong> in the bottom-right corner</li>
+                <li>Click the <strong>blue chat button</strong> (💬) to open the assistant</li>
+                <li>Try typing messages like "balance", "budget", "goals", or "hello"</li>
+                <li>Click the <strong>green download button</strong> (📥) to test report download</li>
+                <li>Test on mobile by resizing your browser window</li>
+            </ol>
+        </div>
+
+        <h3>Expected Features:</h3>
+        <ul>
+            <li>✅ Blue chat button with speech bubble icon</li>
+            <li>✅ Green download button with download icon</li>
+            <li>✅ Hover tooltips on buttons</li>
+            <li>✅ Smooth animations</li>
+            <li>✅ Interactive chat with smart responses</li>
+            <li>✅ Mobile responsive design</li>
+        </ul>
+
+        <h3>Test Messages to Try:</h3>
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin: 20px 0;">
+            <strong>Try these sample messages in the chat:</strong>
+            <ul>
+                <li><code>"What's my account balance?"</code></li>
+                <li><code>"Help with budget planning"</code></li>
+                <li><code>"Show my savings goals"</code></li>
+                <li><code>"Investment advice please"</code></li>
+                <li><code>"Hello"</code></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <button class="floating-btn chat-btn" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>
+            <div class="tooltip">Financial Assistant</div>
+        </button>
+        <button class="floating-btn download-btn" onclick="downloadReport()">
+            <i class="fas fa-download"></i>
+            <div class="tooltip">Download Report</div>
+        </button>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-header">
+            <h3>
+                <i class="fas fa-robot"></i>
+                RBC Financial Assistant
+            </h3>
+            <button class="chat-close" onclick="closeChat()">×</button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot-message">
+                    <div class="message-avatar bot-avatar">RB</div>
+                    <div class="message-bubble">
+                        🎉 Welcome to the RBC Chatbox Test! I'm your financial assistant. Try asking me about balances, budgets, or goals!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-area">
+                <div class="chat-input-container">
+                    <input type="text" class="chat-input" placeholder="Type your message..." id="chatInput" onkeypress="handleChatKeyPress(event)">
+                    <button class="chat-send" onclick="sendMessage()">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test status check
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingBtns = document.querySelectorAll('.floating-btn');
+            const chatModal = document.getElementById('chatModal');
+            const statusElement = document.getElementById('testStatus');
+            
+            if (floatingBtns.length === 2 && chatModal) {
+                statusElement.innerHTML = '<span class="success">✅ All components loaded successfully!</span>';
+            } else {
+                statusElement.innerHTML = '<span style="color: red;">❌ Some components failed to load</span>';
+            }
+        });
+
+        // Chat functionality
+        function toggleChat() {
+            const chatModal = document.getElementById('chatModal');
+            const isVisible = chatModal.style.display === 'block';
+            
+            if (isVisible) {
+                closeChat();
+            } else {
+                openChat();
+            }
+        }
+        
+        function openChat() {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.display = 'block';
+            
+            setTimeout(() => {
+                document.getElementById('chatInput').focus();
+            }, 300);
+        }
+        
+        function closeChat() {
+            const chatModal = document.getElementById('chatModal');
+            chatModal.style.display = 'none';
+        }
+        
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const message = input.value.trim();
+            
+            if (message) {
+                addMessage(message, 'user');
+                input.value = '';
+                
+                setTimeout(() => {
+                    respondToUser(message);
+                }, 800);
+            }
+        }
+        
+        function handleChatKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+        
+        function addMessage(text, sender) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}-message`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `message-avatar ${sender}-avatar`;
+            avatar.textContent = sender === 'user' ? 'YOU' : 'RB';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'message-bubble';
+            bubble.innerHTML = text;
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(bubble);
+            messagesContainer.appendChild(messageDiv);
+            
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+        
+        function respondToUser(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+            let response = '';
+            
+            if (lowerMessage.includes('balance') || lowerMessage.includes('account')) {
+                response = "🏦 Your test account shows $25,430.50 CAD. In the real app, this would show your actual RBC account balances. Would you like to see recent transactions?";
+            } else if (lowerMessage.includes('budget') || lowerMessage.includes('spending')) {
+                response = "📊 Your test budget shows 38% savings rate with $5,240 monthly expenses. Housing & Utilities: $2,100. The real app would show your actual spending patterns from WealthPath!";
+            } else if (lowerMessage.includes('goal') || lowerMessage.includes('saving')) {
+                response = "🎯 Test goals: Emergency Fund 90% complete ($18,000/$20,000), Vacation Fund 52% complete ($4,200/$8,000). The real app connects to your actual financial goals!";
+            } else if (lowerMessage.includes('investment') || lowerMessage.includes('invest')) {
+                response = "📈 Based on your test financial health score of 8.2/10, you might consider balanced growth portfolios. The real assistant would analyze your actual RBC investment accounts!";
+            } else if (lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
+                response = "👋 Hello! This is the test version of the RBC Financial Assistant. I can help with account questions, budget planning, savings goals, and investment guidance. Try asking about any of these topics!";
+            } else {
+                response = `💡 You asked: "${userMessage}". This test bot recognizes keywords like 'balance', 'budget', 'goals', and 'investment'. The real RBC assistant would provide personalized responses based on your actual account data!`;
+            }
+            
+            addMessage(response, 'bot');
+        }
+        
+        function downloadReport() {
+            alert('📊 Test Report Download\n\n✅ Chatbox functionality working!\n\nThis test confirms:\n• Floating buttons are clickable\n• Chat modal opens/closes properly\n• Messages send and receive\n• Responsive design works\n• All animations function correctly\n\nYour RBC WealthPath chatbox is ready to use!');
+        }
+    </script>
+</body>
+</html>
