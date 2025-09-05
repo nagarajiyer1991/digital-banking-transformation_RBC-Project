@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RBC Primary Colors -->
+    <color name="rbc_blue">#006AC2</color>
+    <color name="rbc_blue_dark">#00559C</color>
+    <color name="rbc_blue_light">#E6F3FF</color>
+    
+    <!-- Secondary Colors -->
+    <color name="success_green">#28a745</color>
+    <color name="success_green_light">#20c997</color>
+    <color name="warning_yellow">#ffc107</color>
+    <color name="warning_yellow_light">#ffed4e</color>
+    <color name="purple">#6f42c1</color>
+    <color name="purple_dark">#5c2e95</color>
+    
+    <!-- Background Colors -->
+    <color name="background_primary">#f5f7fa</color>
+    <color name="background_card">#ffffff</color>
+    <color name="background_card_light">#f8f9fa</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#1c5aa0</color>
+    <color name="text_secondary">#666666</color>
+    <color name="text_tertiary">#999999</color>
+    
+    <!-- Border Colors -->
+    <color name="border_light">#e9ecef</color>
+    <color name="border_medium">#ddd</color>
+    
+    <!-- Status Colors -->
+    <color name="status_success">#d1f2eb</color>
+    <color name="status_info">#d1ecf1</color>
+    <color name="status_warning">#fff3cd</color>
+    
+    <!-- System Colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">#00000000</color>
+</resources>

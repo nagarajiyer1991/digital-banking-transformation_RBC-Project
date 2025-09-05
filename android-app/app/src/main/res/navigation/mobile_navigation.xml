@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_dashboard">
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.rbc.wealthpath.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_goals"
+        android:name="com.rbc.wealthpath.ui.goals.GoalsFragment"
+        android:label="Goals &amp; Savings"
+        tools:layout="@layout/fragment_goals" />
+
+    <fragment
+        android:id="@+id/navigation_spending"
+        android:name="com.rbc.wealthpath.ui.spending.SpendingFragment"
+        android:label="Spending Insights"
+        tools:layout="@layout/fragment_spending" />
+
+    <fragment
+        android:id="@+id/navigation_education"
+        android:name="com.rbc.wealthpath.ui.education.EducationFragment"
+        android:label="Financial Education"
+        tools:layout="@layout/fragment_education" />
+
+    <fragment
+        android:id="@+id/navigation_recommendations"
+        android:name="com.rbc.wealthpath.ui.recommendations.RecommendationsFragment"
+        android:label="Recommendations"
+        tools:layout="@layout/fragment_recommendations" />
+
+</navigation>
